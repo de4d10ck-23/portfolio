@@ -62,10 +62,9 @@ function getSmartAIResponse(query: string): string {
     q.includes('competition') ||
     q.includes('award') ||
     q.includes('certificate') ||
-    q.includes('evco') ||
-    q.includes('codechum')
+    q.includes('evco')
   ) {
-    return `Here are my college competition highlights from 1st to 3rd year:\n• **3rd Year:** 🏆 **1st Place Champion** — Programming Skills Competition (FCSIT Day)\n• **2nd Year:** 🥈 **2nd Place & Trophy** — 2nd EVCO 2024 (C Language Strand) representing SLSU\n• **2nd Year:** 🏅 **Semi-Finalist** — CodeChum Programming Competition\n• **1st Year:** 🥈 **2nd Place** — OS Installation Competition (FCIS 1st Year Culmination)`;
+    return `Here are my college competition highlights from 1st to 3rd year:\n• **3rd Year:** 🏆 **1st Place Champion** — Programming Skills Competition (FCSIT Day)\n• **2nd Year:** 🥈 **2nd Place & Trophy** — 2nd EVCO 2024 (C Language Strand) representing SLSU\n• **1st Year:** 🥈 **2nd Place** — OS Installation Competition (FCIS 1st Year Culmination)`;
   }
   if (q.includes('school') || q.includes('course') || q.includes('slsu')) {
     return `I am currently a **4th-year BS Information Technology (Major in Programming) student at Southern Leyte State University (SLSU)**, focusing on full-stack web applications, SaaS platforms, Web-GIS, and embedded IoT systems!`;
@@ -88,7 +87,7 @@ function getSmartAIResponse(query: string): string {
   if (q.includes('contact') || q.includes('email') || q.includes('phone') || q.includes('hire')) {
     return `You can reach me directly at **johnlloydttortor@gmail.com** or call/text **0953 987 0591**. I live in **San Vicente, Bontoc, Southern Leyte** and I'm open to software, SaaS, Web-GIS, and IoT/ESP32 projects or developer opportunities!`;
   }
-  return `Hi! I'm **AI John** — John Lloyd T. Tortor's portfolio assistant. John is a **4th-year BS InfoTech (Programming) student at SLSU**, founder of **Pixefy SaaS (₱9,045+ revenue, 1,088+ users)**, Lead Programmer of **WaterWatch Web-GIS**, **1st Place FCSIT Programming Champion**, **2nd Place EVCO 2024 (C Strand)**, **CodeChum Semi-Finalist**, and content creator (**60K+ TikTok, 21K+ YouTube**). Check his GitHub at **@de4d10ck-23** (675 contributions) or ask me anything!`;
+  return `Hi! I'm **AI John** — John Lloyd T. Tortor's portfolio assistant. John is a **4th-year BS InfoTech (Programming) student at SLSU**, founder of **Pixefy SaaS (₱9,045+ revenue, 1,088+ users)**, Lead Programmer of **WaterWatch Web-GIS**, **1st Place FCSIT Programming Champion**, **2nd Place EVCO 2024 (C Strand)**, and content creator (**60K+ TikTok, 21K+ YouTube**). Check his GitHub at **@de4d10ck-23** (675 contributions) or ask me anything!`;
 }
 
 // Generate deterministic 52-week contribution data matching user's real GitHub screenshot (@de4d10ck-23: 675 contributions)
@@ -476,7 +475,7 @@ export const Hero: React.FC = () => {
               <div className="flex items-center gap-3">
                 <Trophy className="w-3.5 h-3.5 text-amber-500 flex-shrink-0" />
                 <span className="text-[13px] text-gray-600 font-medium">
-                  1st Place FCSIT Coding · 2nd Place EVCO 2024 (C) · CodeChum Semi-Finalist
+                  1st Place FCSIT Coding · 2nd Place EVCO 2024 (C Strand) · 2nd Place OS Installation
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -589,9 +588,9 @@ export const Hero: React.FC = () => {
               <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-gray-400">
                 IT Competitions Won
               </p>
-              <p className="text-2xl font-extrabold text-gray-900 mt-1">4 Titles</p>
+              <p className="text-2xl font-extrabold text-gray-900 mt-1">3 Awards</p>
               <p className="text-[11px] text-amber-600 font-semibold mt-0.5">
-                1st FCSIT · 2nd EVCO · CodeChum
+                1st FCSIT · 2nd EVCO · 2nd OS
               </p>
             </div>
             <div className="bg-gray-50 border border-gray-100 rounded-2xl p-4 text-center hover:border-blue-100 hover:bg-white hover:shadow-sm transition-all">

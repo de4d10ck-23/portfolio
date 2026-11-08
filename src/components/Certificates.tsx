@@ -105,7 +105,7 @@ export const Certificates: React.FC<{ onPreviewImage: (src: string, title: strin
               Certificates &amp; Awards
             </h2>
             <p className="max-w-xl mx-auto text-[15px] leading-relaxed text-gray-500">
-              From winning <strong>1st Place in the FCSIT Day Programming Skills Competition</strong> and <strong>2nd Place in the 2nd EVCO 2024 (C Language Strand)</strong> to reaching the <strong>CodeChum Semi-Finals</strong> and <strong>2nd Place in OS Installation</strong>.
+              From winning <strong>1st Place in the FCSIT Day Programming Skills Competition</strong> and <strong>2nd Place in the 2nd EVCO 2024 (C Language Strand)</strong> to <strong>2nd Place in OS Installation</strong>.
             </p>
             <div className="flex items-center justify-center gap-2 mt-5">
               <div className="w-10 h-0.5 bg-gray-300 rounded-full" />

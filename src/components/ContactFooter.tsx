@@ -159,14 +159,6 @@ export const ContactFooter: React.FC = () => {
                     >
                       <span>EVCO 2024 Post</span>
                     </a>
-                    <a
-                      href="https://www.facebook.com/photo/?fbid=1016215010515797&set=a.371119525025352"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gray-100 hover:bg-emerald-600 text-gray-700 hover:text-white text-[12px] font-semibold transition-all duration-200"
-                    >
-                      <span>CodeChum Semi-Finals</span>
-                    </a>
                   </div>
                 </div>
               </div>

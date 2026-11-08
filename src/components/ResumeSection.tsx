@@ -18,7 +18,7 @@ export const ResumeSection: React.FC = () => {
     {
       icon: Trophy,
       title: 'Competitive Programmer & IoT / Robotics Maker',
-      sub: '1st Place FCSIT Day · 2nd Place EVCO 2024 (C Strand) · CodeChum Semi-Finalist',
+      sub: '1st Place FCSIT Day · 2nd Place EVCO 2024 (C Strand) · 2nd Place OS Installation',
     },
     {
       icon: Sparkles,

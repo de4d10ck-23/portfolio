@@ -34,7 +34,7 @@ const SKILL_CARDS = [
     icon: Trophy,
     title: 'Competitive Programming (C & Algorithms)',
     description:
-      '1st Place Champion in the FCSIT Day Programming Skills Competition (3rd Year), 2nd Place & Trophy winner in the 2nd EVCO 2024 C Language Strand (2nd Year), and Semi-Finalist in the CodeChum Competition.',
+      '1st Place Champion in the FCSIT Day Programming Skills Competition (3rd Year), 2nd Place & Trophy winner in the 2nd EVCO 2024 C Language Strand (2nd Year), and 2nd Place in OS Installation (1st Year).',
   },
   {
     icon: Film,

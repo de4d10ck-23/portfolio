@@ -216,26 +216,6 @@ export const CERTIFICATES_DATA: CertificateItem[] = [
     links: [],
     accentColor: "from-indigo-600 to-blue-700",
   },
-  {
-    id: "codechum-semis",
-    yearTag: "2024 · 2nd Year",
-    placement: "🏅 Semi-Finalist",
-    title: "CodeChum National / Regional Programming Competition",
-    issuer: "CodeChum · SLSU Coaching Team",
-    desc: "Advanced to the Semi-Finals of the prestigious CodeChum Programming Competition during 2nd year college, competing against top student programmers.",
-    img: "/certificates/cert-codechum.svg",
-    links: [
-      {
-        label: "CodeChum Official Photo",
-        url: "https://www.facebook.com/photo/?fbid=1016215010515797&set=a.371119525025352",
-      },
-      {
-        label: "Coach's Feature Post",
-        url: "https://www.facebook.com/funfunky31/posts/pfbid0bpq25X1gbSGzhraq443fgpMr4x7avMD6z4bsbABMHW8WWx5ytNz5KLdDr1Xr5Meel",
-      },
-    ],
-    accentColor: "from-emerald-600 to-teal-700",
-  },
 ];
 
 export const SKILLS_LIST = [
@@ -391,25 +371,6 @@ export const MILESTONES_TIMELINE: MilestoneItem[] = [
       {
         label: "SLSU Official Post",
         url: "https://www.facebook.com/southernleytestateu/posts/pfbid0M9D1Xsx3L3VrRntczMzF2qhdTwQ9xSKE1cLux5Ahv3XzE8DgU84g3C2SpdaM7zdxl",
-      },
-    ],
-  },
-  {
-    period: "2nd Year College · 2024",
-    yearLevel: "2nd Year BSIT",
-    title: "Semi-Finalist — CodeChum Programming Competition",
-    location: "CodeChum Regional / National Competition",
-    badge: "🏅 Semi-Finalist",
-    description:
-      "Competed in the CodeChum Programming Competition during 2nd year and advanced to the Semi-Finals alongside our SLSU coaching team. Also paused TikTok (60K followers) and YouTube (21K subscribers) uploads this year to dedicate 100% focus to programming competitions and software engineering.",
-    links: [
-      {
-        label: "CodeChum Official Post",
-        url: "https://www.facebook.com/photo/?fbid=1016215010515797&set=a.371119525025352",
-      },
-      {
-        label: "Coach's Facebook Post",
-        url: "https://www.facebook.com/funfunky31/posts/pfbid0bpq25X1gbSGzhraq443fgpMr4x7avMD6z4bsbABMHW8WWx5ytNz5KLdDr1Xr5Meel",
       },
     ],
   },
