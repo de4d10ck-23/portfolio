@@ -196,17 +196,6 @@ export const CERTIFICATES_DATA: CertificateItem[] = [
     accentColor: "from-blue-600 to-indigo-700",
   },
   {
-    id: "research-congress-2026",
-    yearTag: "May 28, 2026 · 3rd Year",
-    placement: "🎙️ Research Presenter",
-    title: "Research Congress Presenter — AI Impact on Employment Rates",
-    issuer: "Southern Leyte State University – Sogod Campus",
-    desc: "Certificate of Recognition for actively participating as a Presenter during the Research Congress in Fundamentals of Research and Design, presenting the study entitled 'The Impact of Artificial Intelligence on Employment Rates' on May 28, 2026.",
-    img: "/certificates/cert-research-congress-2026.jpg",
-    links: [],
-    accentColor: "from-sky-600 to-blue-700",
-  },
-  {
     id: "os-install-2nd",
     yearTag: "December 6, 2023 · 1st Year",
     placement: "🥈 2nd Place",
@@ -373,15 +362,6 @@ export const MILESTONES_TIMELINE: MilestoneItem[] = [
       { label: "Pixefy Live", url: "https://pixefy.tortor.org/" },
       { label: "WaterWatch Live", url: "https://waterwatch.tortor.org/" },
     ],
-  },
-  {
-    period: "May 28, 2026 · 3rd Year",
-    yearLevel: "3rd Year BSIT",
-    title: "Research Congress Presenter — 'The Impact of Artificial Intelligence on Employment Rates'",
-    location: "SLSU – Sogod Campus, Southern Leyte",
-    badge: "🎙️ Research Presenter",
-    description:
-      "Recognized for actively participating as a Presenter during the Research Congress in Fundamentals of Research and Design, presenting the research study entitled 'The Impact of Artificial Intelligence on Employment Rates' before the panel of evaluators and faculty.",
   },
   {
     period: "March 5, 2025 · 3rd Year",
