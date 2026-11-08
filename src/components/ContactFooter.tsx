@@ -260,12 +260,6 @@ export const ContactFooter: React.FC = () => {
                 Skills
               </a>
               <a
-                href="#certificates"
-                className="text-[12px] font-medium text-gray-400 hover:text-white transition-colors duration-150"
-              >
-                Certificates
-              </a>
-              <a
                 href="#projects"
                 className="text-[12px] font-medium text-gray-400 hover:text-white transition-colors duration-150"
               >
@@ -276,6 +270,12 @@ export const ContactFooter: React.FC = () => {
                 className="text-[12px] font-medium text-gray-400 hover:text-white transition-colors duration-150"
               >
                 Journey
+              </a>
+              <a
+                href="#certificates"
+                className="text-[12px] font-medium text-gray-400 hover:text-white transition-colors duration-150"
+              >
+                Certificates
               </a>
               <a
                 href="#contact"
