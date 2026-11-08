@@ -551,9 +551,9 @@ export const Hero: React.FC = () => {
               <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-gray-400">
                 IT Competitions Won
               </p>
-              <p className="text-2xl font-extrabold text-gray-900 mt-1">3 Awards</p>
+              <p className="text-2xl font-extrabold text-gray-900 mt-1">3+ Awards</p>
               <p className="text-[11px] text-amber-600 font-semibold mt-0.5">
-                1st FCSIT · 2nd EVCO · 2nd OS
+                1st FCSIT · 2nd EVCO · Hackathons &amp; More
               </p>
             </div>
             <div className="bg-gray-50 border border-gray-100 rounded-2xl p-4 text-center hover:border-blue-100 hover:bg-white hover:shadow-sm transition-all">
