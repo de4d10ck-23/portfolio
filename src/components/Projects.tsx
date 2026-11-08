@@ -77,27 +77,27 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex items-center py-4">
+          <div className="overflow-hidden select-none" ref={emblaRef}>
+            <div className="flex items-start py-4">
               {PROJECTS_DATA.map((proj: ProjectItem, idx: number) => {
                 const isActive = idx === selectedIndex;
                 return (
                   <div
                     key={proj.id}
                     onClick={() => !isActive && scrollTo(idx)}
-                    className="flex-[0_0_90%] min-w-0 sm:flex-[0_0_72%] md:flex-[0_0_60%] lg:flex-[0_0_50%] xl:flex-[0_0_44%] px-1.5 md:px-3"
+                    className="flex-[0_0_88%] min-w-0 sm:flex-[0_0_72%] md:flex-[0_0_60%] lg:flex-[0_0_50%] xl:flex-[0_0_44%] px-1.5 md:px-3"
                   >
                     <div
-                      className={`group relative flex flex-col h-full w-full bg-white border border-gray-100 rounded-2xl overflow-hidden transition-all duration-500 ease-out ${
+                      className={`group relative flex flex-col h-full w-full bg-white border border-gray-100 rounded-2xl overflow-hidden transition-all duration-300 ease-out ${
                         isActive
                           ? 'shadow-xl scale-100 opacity-100'
-                          : 'shadow-sm scale-[0.88] opacity-40 hover:opacity-75 cursor-pointer'
+                          : 'shadow-sm scale-[0.94] md:scale-[0.88] opacity-50 md:opacity-40 hover:opacity-75 cursor-pointer'
                       }`}
                     >
                       {/* Project Image Container */}
                       <div
-                        className={`relative overflow-hidden bg-gray-50 transition-all duration-500 ${
-                          isActive ? 'h-64 md:h-80' : 'h-48 md:h-56'
+                        className={`relative overflow-hidden bg-gray-50 transition-all duration-300 ${
+                          isActive ? 'h-52 sm:h-64 md:h-80' : 'h-40 sm:h-48 md:h-56'
                         }`}
                       >
                         <img
@@ -108,14 +108,14 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                         {/* Top Left Badge */}
-                        <div className="absolute top-3 left-3">
-                          <span className="text-[10px] font-bold tracking-wider uppercase bg-gray-900/85 text-white backdrop-blur-sm px-3 py-1 rounded-full border border-white/15">
+                        <div className="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 max-w-[75%] sm:max-w-none">
+                          <span className="block truncate text-[9px] sm:text-[10px] font-bold tracking-wider uppercase bg-gray-900/90 text-white backdrop-blur-sm px-2.5 py-1 sm:px-3 rounded-full border border-white/15">
                             {proj.badge}
                           </span>
                         </div>
 
                         {isActive && (
-                          <div className="absolute top-3 right-3 flex items-center gap-1.5 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                          <div className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 flex items-center gap-1.5 opacity-100 md:opacity-0 md:translate-y-1 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-300">
                             <button
                               type="button"
                               onClick={(e) => {
@@ -123,9 +123,9 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
                                 onPreviewImage(proj.img, proj.title);
                               }}
                               title="Inspect Screenshot"
-                              className="bg-white hover:bg-gray-100 text-gray-800 rounded-full p-2 shadow-md transition-colors"
+                              className="bg-white/90 hover:bg-white text-gray-800 rounded-full p-1.5 sm:p-2 shadow-md transition-colors backdrop-blur-sm"
                             >
-                              <Eye className="w-4 h-4" />
+                              <Eye className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                             </button>
                             <a
                               href={proj.site}
@@ -133,9 +133,9 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
                               rel={
                                 proj.site.startsWith('http') ? 'noopener noreferrer' : undefined
                               }
-                              className="bg-white hover:bg-blue-600 text-gray-800 hover:text-white rounded-full p-2 shadow-md transition-colors"
+                              className="bg-white/90 hover:bg-blue-600 text-gray-800 hover:text-white rounded-full p-1.5 sm:p-2 shadow-md transition-colors backdrop-blur-sm"
                             >
-                              <ArrowUpRight className="w-4 h-4" />
+                              <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                             </a>
                           </div>
                         )}
@@ -143,22 +143,22 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
 
                       {/* Card Content */}
                       <div
-                        className={`flex flex-col flex-grow gap-3 transition-all duration-500 ${
-                          isActive ? 'p-6' : 'p-4'
+                        className={`flex flex-col flex-grow gap-2.5 sm:gap-3 transition-all duration-300 ${
+                          isActive ? 'p-4 sm:p-6' : 'p-3 sm:p-4'
                         }`}
                       >
                         <div>
                           <h3
-                            className={`font-bold text-gray-900 uppercase transition-all duration-500 ${
+                            className={`font-bold text-gray-900 uppercase transition-all duration-300 ${
                               isActive
-                                ? 'text-base tracking-widest'
+                                ? 'text-sm sm:text-base tracking-wider sm:tracking-widest'
                                 : 'text-xs tracking-wide'
                             }`}
                           >
                             {proj.title}
                           </h3>
                           {isActive && (
-                            <p className="text-[12px] font-medium text-blue-600 mt-0.5">
+                            <p className="text-[11px] sm:text-[12px] font-medium text-blue-600 mt-0.5">
                               {proj.subtitle}
                             </p>
                           )}
@@ -171,21 +171,21 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
 
                         {isActive && (
                           <>
-                            <p className="text-[13px] leading-relaxed text-gray-500 flex-grow">
+                            <p className="text-[12px] sm:text-[13px] leading-relaxed text-gray-500 flex-grow">
                               {proj.desc}
                             </p>
 
                             {proj.metrics && (
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 py-2">
+                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-2 py-1 sm:py-2">
                                 {proj.metrics.map((m) => (
                                   <div
                                     key={m.label}
-                                    className="bg-gray-50 border border-gray-100 rounded-xl px-2.5 py-2 text-center"
+                                    className="bg-gray-50 border border-gray-100 rounded-xl px-2 py-2 text-center flex flex-col justify-center min-h-[54px] sm:min-h-[58px]"
                                   >
-                                    <p className="text-[13px] font-extrabold text-gray-900">
+                                    <p className="text-[12px] sm:text-[13px] font-extrabold text-gray-900 leading-tight">
                                       {m.value}
                                     </p>
-                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-400">
+                                    <p className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-gray-400 mt-0.5 truncate">
                                       {m.label}
                                     </p>
                                   </div>
@@ -193,11 +193,11 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
                               </div>
                             )}
 
-                            <div className="flex flex-wrap gap-1.5 pt-1">
+                            <div className="flex flex-wrap gap-1 sm:gap-1.5 pt-0.5 sm:pt-1">
                               {proj.tech.map((t) => (
                                 <span
                                   key={t}
-                                  className="text-[11px] font-medium px-2.5 py-1 rounded-full bg-gray-100 text-gray-600 tracking-wide"
+                                  className="text-[10px] sm:text-[11px] font-medium px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-gray-100 text-gray-600 tracking-wide"
                                 >
                                   {t}
                                 </span>
@@ -208,12 +208,12 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
                       </div>
 
                       {isActive && (
-                        <div className="px-6 pb-6 flex items-center justify-start">
+                        <div className="px-4 pb-4 sm:px-6 sm:pb-6 flex items-center justify-start">
                           <a
                             href={proj.site}
                             target={proj.site.startsWith('http') ? '_blank' : undefined}
                             rel={proj.site.startsWith('http') ? 'noopener noreferrer' : undefined}
-                            className="flex items-center gap-1.5 text-[12px] font-semibold text-blue-600 hover:text-blue-700 transition-colors tracking-wide uppercase"
+                            className="flex items-center gap-1.5 text-[11px] sm:text-[12px] font-semibold text-blue-600 hover:text-blue-700 transition-colors tracking-wide uppercase"
                           >
                             <span>
                               {proj.site.startsWith('http')
@@ -232,15 +232,15 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
           </div>
 
           {/* Carousel Controls matching jemcdyn.vercel.app */}
-          <div className="flex items-center justify-center gap-6 mt-10">
+          <div className="flex items-center justify-center gap-4 sm:gap-6 mt-8 sm:mt-10">
             <button
               onClick={scrollPrev}
               aria-label="Previous project"
-              className="flex w-10 h-10 rounded-full border border-gray-200 bg-white items-center justify-center text-gray-600 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50 transition-colors duration-200 shadow-sm"
+              className="flex w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-gray-200 bg-white items-center justify-center text-gray-600 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50 transition-colors duration-200 shadow-sm"
             >
               <ArrowLeft className="w-4 h-4" />
             </button>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 sm:gap-2">
               {scrollSnaps.map((_, idx) => (
                 <button
                   key={idx}
@@ -248,7 +248,7 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
                   aria-label={`Go to project ${idx + 1}`}
                   className={`h-1.5 rounded-full transition-all duration-300 ${
                     idx === selectedIndex
-                      ? 'w-6 bg-blue-600'
+                      ? 'w-5 sm:w-6 bg-blue-600'
                       : 'w-1.5 bg-gray-300 hover:bg-gray-400'
                   }`}
                 />
@@ -257,7 +257,7 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
             <button
               onClick={scrollNext}
               aria-label="Next project"
-              className="flex w-10 h-10 rounded-full border border-gray-200 bg-white items-center justify-center text-gray-600 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50 transition-colors duration-200 shadow-sm"
+              className="flex w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-gray-200 bg-white items-center justify-center text-gray-600 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50 transition-colors duration-200 shadow-sm"
             >
               <ArrowRight className="w-4 h-4" />
             </button>
