@@ -22,8 +22,8 @@ export const ResumeSection: React.FC = () => {
     },
     {
       icon: Sparkles,
-      title: 'Digital Content Creator (60K+ TikTok & 21K+ YouTube)',
-      sub: 'Built an 81K+ combined social community & ₱6,000+ TikTok Affiliate revenue',
+      title: '3D Animator, Video Editor & Digital Creator (81K+ Community)',
+      sub: 'Grew 60K+ TikTok & 21K+ YouTube via Blender 3D animation & CapCut; designs apparel using CorelDRAW, Photoshop & Illustrator',
     },
   ];
 
@@ -43,7 +43,7 @@ export const ResumeSection: React.FC = () => {
             My Resume
           </h2>
           <p className="text-[15px] leading-relaxed text-gray-500 mb-6 max-w-md">
-            I am a passionate Software Developer and 4th-year BS Information Technology (Programming) student at Southern Leyte State University, specializing in full-stack SaaS applications, Web-GIS platforms, competitive programming, and smartphone-controlled IoT hardware.
+            I am a passionate Software Developer, 3D Animator, and 4th-year BS Information Technology (Programming) student at Southern Leyte State University. I specialize in full-stack SaaS platforms, Web-GIS mapping, Blender 3D animation, CapCut video editing, and t-shirt apparel design.
           </p>
 
           <div className="flex flex-wrap items-center gap-4">

@@ -30,13 +30,28 @@ interface ChatMessage {
 
 const ROLE_TITLES = [
   'FULL-STACK & SAAS DEVELOPER',
+  '3D ANIMATOR & VIDEO EDITOR (BLENDER / CAPCUT)',
   '4TH YEAR BSIT (PROGRAMMING) STUDENT',
-  'COMPETITIVE PROGRAMMER & IOT MAKER',
+  'APPAREL & T-SHIRT DESIGNER',
   'CAPSTONE LEAD PROGRAMMER (WATERWATCH)',
 ];
 
 function getSmartAIResponse(query: string): string {
   const q = query.toLowerCase();
+  if (
+    q.includes('animat') ||
+    q.includes('edit') ||
+    q.includes('blender') ||
+    q.includes('capcut') ||
+    q.includes('tshirt') ||
+    q.includes('t-shirt') ||
+    q.includes('clothes') ||
+    q.includes('coreldraw') ||
+    q.includes('photoshop') ||
+    q.includes('illustrator')
+  ) {
+    return `Yes! In addition to software engineering, I am a **3D animator, video editor, and apparel designer**:\n• **3D Animation & Video Editing:** I create 3D animations using **Blender** and edit dynamic videos with **CapCut**. These animations and edits were the primary reason I built an audience of over **60K+ followers on TikTok** and **21K+ subscribers on YouTube**!\n• **Apparel & T-Shirt Design:** I design clothes and t-shirts using **CorelDRAW, Adobe Photoshop, and Adobe Illustrator**. This apparel design background gave me the domain knowledge to create **Pixefy SaaS** (with 3D sublimation mockups and pattern cleanups)!`;
+  }
   if (q.includes('pixefy') || q.includes('saas') || q.includes('revenue')) {
     return `**Pixefy** (https://pixefy.tortor.org/) is an AI-powered design and image-editing SaaS I launched in **August 2026** during my summer break! It helps sublimation printers and jersey creators upscale images, clean patterns, extract vectors, and preview 3D mockups. So far, it has reached **₱9,045+ in approved revenue**, **1,088+ registered users**, and **279+ projects created**!`;
   }
@@ -68,7 +83,7 @@ function getSmartAIResponse(query: string): string {
     return `You can check out my active GitHub profile at **https://github.com/de4d10ck-23** (@de4d10ck-23)! I have **36 public repositories** and **675 contributions in the last year**. My core repositories include **Pixefy SaaS**, **capstone_backend**, **binanceTelegramBot**, **metatrader5TelegramBot**, and **BHMS**!`;
   }
   if (q.includes('tiktok') || q.includes('youtube') || q.includes('creator')) {
-    return `I grew a community of **60,000+ followers on TikTok** and **21,000+ subscribers on YouTube**, and earned **₱6,000+ from TikTok Affiliate**! I paused uploading in my 2nd year of college to focus 100% on competitive programming and my BSIT degree.`;
+    return `I grew a community of **60,000+ followers on TikTok** and **21,000+ subscribers on YouTube** through my **3D animations in Blender** and **video edits in CapCut**, earning **₱6,000+ from TikTok Affiliate**! I paused uploading in my 2nd year of college to focus 100% on competitive programming and my BSIT degree.`;
   }
   if (q.includes('contact') || q.includes('email') || q.includes('phone') || q.includes('hire')) {
     return `You can reach me directly at **johnlloydttortor@gmail.com** or call/text **0953 987 0591**. I live in **San Vicente, Bontoc, Southern Leyte** and I'm open to software, SaaS, Web-GIS, and IoT/ESP32 projects or developer opportunities!`;
@@ -444,7 +459,7 @@ export const Hero: React.FC = () => {
                     DESIGNATION &amp; VENTURES
                   </p>
                   <p className="text-[13px] text-gray-800 font-semibold">
-                    Founder @ Pixefy SaaS (₱9K+ Rev) · Lead Programmer @ WaterWatch · IoT Commissioner
+                    Founder @ Pixefy SaaS · Capstone Lead Programmer · 3D Animator &amp; Apparel Designer
                   </p>
                 </div>
               </div>
@@ -467,8 +482,8 @@ export const Hero: React.FC = () => {
               <div className="flex items-center gap-3">
                 <Video className="w-3.5 h-3.5 text-rose-500 flex-shrink-0" />
                 <span className="text-[13px] text-gray-500">
-                  Content Creator: <strong className="text-gray-700">60K+ TikTok</strong> &amp;{' '}
-                  <strong className="text-gray-700">21K+ YouTube</strong> (₱6K+ Affiliate)
+                  Animator &amp; Editor: <strong className="text-gray-700">60K+ TikTok</strong> &amp;{' '}
+                  <strong className="text-gray-700">21K+ YouTube</strong> (Blender · CapCut · Apparel)
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -585,7 +600,7 @@ export const Hero: React.FC = () => {
               </p>
               <p className="text-2xl font-extrabold text-gray-900 mt-1">81K+ Total</p>
               <p className="text-[11px] text-rose-600 font-semibold mt-0.5">
-                60K TikTok · 21K YouTube
+                60K TikTok · 21K YouTube · Blender &amp; CapCut
               </p>
             </div>
           </div>

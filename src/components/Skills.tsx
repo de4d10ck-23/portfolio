@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
   Layout,
-  Server,
+  Film,
   Cpu,
   Globe,
   Database,
@@ -36,16 +36,16 @@ const SKILL_CARDS = [
       '1st Place Champion in the FCSIT Day Programming Skills Competition (3rd Year), 2nd Place & Trophy winner in the 2nd EVCO 2024 C Language Strand (2nd Year), and Semi-Finalist in the CodeChum Competition.',
   },
   {
+    icon: Film,
+    title: '3D Animation, Video Editing & Apparel Design',
+    description:
+      'I create 3D animations in Blender and edit dynamic videos in CapCut—the creative force behind my 60K+ TikTok and 21K+ YouTube audience. I also design t-shirts and apparel using CorelDRAW, Photoshop, and Illustrator, which inspired Pixefy SaaS.',
+  },
+  {
     icon: Database,
     title: 'Databases, Auth & Billing Workflows',
     description:
-      'I design relational databases (MySQL, PostgreSQL, Supabase), secure Google OAuth / token authentication, and GCash payment verification panels.',
-  },
-  {
-    icon: Server,
-    title: 'Systems, OS & Digital Reach',
-    description:
-      '2nd Place winner in the FCIS 1st Year OS Installation Competition, experienced in deploying custom domains (*.tortor.org), and creator of a 60K+ TikTok & 21K+ YouTube community.',
+      'I design relational databases (MySQL, PostgreSQL, Supabase), secure Google OAuth / token authentication, and GCash payment verification panels for production applications.',
   },
 ];
 
