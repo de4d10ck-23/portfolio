@@ -46,7 +46,7 @@ export interface MilestoneItem {
 export const PERSONAL_INFO = {
   name: "JOHN LLOYD T. TORTOR",
   shortName: "John Lloyd Tortor",
-  brandPrefix: "JLT",
+  brandPrefix: "JL",
   brandSuffix: "TORTOR",
   brandRole: "Dev",
   locationBadge: "Based in Bontoc, Southern Leyte, PH",
