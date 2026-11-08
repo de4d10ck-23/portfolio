@@ -54,6 +54,15 @@ export const Navbar: React.FC = () => {
             <span>GitHub</span>
           </a>
           <a
+            href="http://ehuwat.tortor.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-[12px] font-semibold text-emerald-700 hover:text-emerald-900 px-3 py-1.5 rounded-lg hover:bg-emerald-50 transition-all duration-150"
+          >
+            E-Huwat Radar
+            <ExternalLink className="w-3 h-3" />
+          </a>
+          <a
             href="https://waterwatch.tortor.org/"
             target="_blank"
             rel="noopener noreferrer"
@@ -111,6 +120,15 @@ export const Navbar: React.FC = () => {
             >
               <Github className="w-3.5 h-3.5" />
               <span>GitHub</span>
+            </a>
+            <a
+              href="http://ehuwat.tortor.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-[12px] font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-3 py-1.5 rounded-lg transition-all duration-150"
+            >
+              <span>E-Huwat</span>
+              <ExternalLink className="w-3 h-3" />
             </a>
             <a
               href="https://waterwatch.tortor.org/"

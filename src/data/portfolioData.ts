@@ -9,6 +9,7 @@ export interface ProjectItem {
   tech: string[];
   site: string;
   secondaryLink?: { label: string; url: string };
+  status?: 'ongoing' | 'completed';
 }
 
 export interface CertificateItem {
@@ -93,6 +94,33 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "SaaS Architecture",
     ],
     site: "https://pixefy.tortor.org/",
+    status: "completed",
+  },
+  {
+    id: "ehuwat",
+    img: "/projects/ehuwat-preview.svg",
+    badge: "Ongoing Project · Live Transit Radar & PWA",
+    title: "E-HUWAT — LIVE TRANSIT RADAR",
+    subtitle: "Community Transit Radar & GPS Hailing for Southern Leyte",
+    desc: "An ongoing real-time community map radar and Progressive Web App (PWA) for Sogod and Southern Leyte. Enables commuters (including SLSU students and locals) to broadcast a live 'Ga-Huwat Ko!' GPS pin to nearby Tricycles, Multicabs, Vans, and Buses on an interactive live radar.",
+    metrics: [
+      { label: "Transit Modes", value: "Tricycles, Multicabs, Vans, Buses" },
+      { label: "Coverage", value: "Sogod & Southern Leyte" },
+      { label: "Core Feature", value: "Live GPS 'Ga-Huwat Ko!'" },
+      { label: "Status", value: "Active / Ongoing" },
+    ],
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Interactive Radar Map",
+      "Geolocation API",
+      "Progressive Web App (PWA)",
+      "Real-Time Transit Hailing",
+      "Local Transportation",
+    ],
+    site: "http://ehuwat.tortor.org/",
+    status: "ongoing",
   },
   {
     id: "waterwatch",
@@ -105,7 +133,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       { label: "Role", value: "Lead Programmer" },
       { label: "Platform", value: "Web-GIS + PWA" },
       { label: "Analytics", value: "Quality Forecasting" },
-      { label: "Status", value: "Live Production" },
+      { label: "Status", value: "Active / Ongoing" },
     ],
     tech: [
       "React.js",
@@ -118,6 +146,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "MySQL / PostgreSQL",
     ],
     site: "https://waterwatch.tortor.org/",
+    status: "ongoing",
   },
   {
     id: "aeroponics",
@@ -141,6 +170,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "Embedded Systems",
     ],
     site: "#contact",
+    status: "completed",
   },
   {
     id: "rc-robot",
@@ -164,6 +194,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "Robotics",
     ],
     site: "#contact",
+    status: "completed",
   },
 ];
 

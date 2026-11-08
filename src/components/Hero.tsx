@@ -55,6 +55,9 @@ function getSmartAIResponse(query: string): string {
   if (q.includes('pixefy') || q.includes('saas') || q.includes('revenue')) {
     return `**Pixefy** (https://pixefy.tortor.org/) is an AI-powered design and image-editing SaaS I launched in **August 2026** during my summer break! It helps sublimation printers and jersey creators upscale images, clean patterns, extract vectors, and preview 3D mockups. So far, it has reached **₱9,045+ in approved revenue**, **1,088+ registered users**, and **279+ projects created**!`;
   }
+  if (q.includes('ehuwat') || q.includes('transit') || q.includes('radar') || q.includes('commute') || q.includes('huwat')) {
+    return `**E-Huwat** (http://ehuwat.tortor.org/) is my ongoing **Community Transit Radar & GPS Hailing PWA** for Sogod and Southern Leyte! It solves everyday transit waits by enabling commuters (especially SLSU students and locals) to broadcast a live **'Ga-Huwat Ko!' GPS pin** to nearby drivers, tracking Tricycles, Multicabs, Vans, and Buses in real-time.`;
+  }
   if (q.includes('waterwatch') || q.includes('capstone') || q.includes('gis')) {
     return `My 4th-year Capstone Project is **WaterWatch: A Web-GIS Platform for Water Source Monitoring and Quality Forecasting** (https://waterwatch.tortor.org/). I serve as the **Lead Programmer**, building the interactive geospatial map for Maasin City water sources, real-time quality tracking, and time-series water quality forecasting as a Progressive Web App (PWA).`;
   }
@@ -383,7 +386,7 @@ export const Hero: React.FC = () => {
           >
             <input
               type="text"
-              placeholder="Ask AI John anything (e.g., Pixefy SaaS, EVCO 2024, WaterWatch, IoT)..."
+              placeholder="Ask AI John anything (e.g., Pixefy SaaS, E-Huwat Transit Radar, WaterWatch, IoT)..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
               disabled={isSending}
