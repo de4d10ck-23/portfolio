@@ -545,18 +545,6 @@ export const Hero: React.FC = () => {
                     src={customPortrait || PERSONAL_INFO.avatarUrl}
                     className="h-[21rem] sm:h-[25rem] lg:h-[28rem] w-[260px] sm:w-[300px] lg:w-[330px] object-cover object-top"
                   />
-                  {/* Subtle status pill on photo */}
-                  <div className="absolute bottom-3 left-3 right-3 p-2.5 rounded-2xl bg-white/95 backdrop-blur-md border border-gray-200/80 shadow-lg flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse ring-4 ring-emerald-500/20" />
-                      <span className="text-[11px] font-bold text-gray-800">
-                        John Lloyd T. Tortor
-                      </span>
-                    </div>
-                    <span className="text-[10px] font-bold tracking-wider uppercase text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">
-                      BSIT-4 · Dev
-                    </span>
-                  </div>
                 </div>
 
                 {/* Optional Upload Custom Portrait Button on Hover */}
@@ -585,21 +573,6 @@ export const Hero: React.FC = () => {
                 className="px-4 py-2 bg-gray-900 hover:bg-gray-700 text-white text-[12px] font-bold rounded-lg transition-colors shadow-sm"
               >
                 View My Work
-              </a>
-              <a
-                href={PERSONAL_INFO.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-900 text-[12px] font-bold rounded-lg border border-gray-200 transition-colors flex items-center gap-1.5"
-              >
-                <Github className="w-3.5 h-3.5" />
-                <span>GitHub (@de4d10ck-23)</span>
-              </a>
-              <a
-                href="#certificates"
-                className="px-4 py-2 bg-blue-50 hover:bg-blue-100 text-blue-700 text-[12px] font-bold rounded-lg border border-blue-200 transition-colors"
-              >
-                Awards &amp; Certificates
               </a>
               <a
                 href="#contact"
