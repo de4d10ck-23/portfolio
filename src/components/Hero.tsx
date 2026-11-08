@@ -38,7 +38,7 @@ const ROLE_TITLES = [
 function getSmartAIResponse(query: string): string {
   const q = query.toLowerCase();
   if (q.includes('pixefy') || q.includes('saas') || q.includes('revenue')) {
-    return `**Pixefy** (https://pixefy.tortor.org/) is an AI-powered design and image-editing SaaS I launched in **August 2026** during my summer break! It helps sublimation printers and jersey creators upscale images, clean patterns, extract vectors, and preview 3D mockups. So far, it has reached **₱9,045+ in approved revenue**, **1,088+ registered users**, **279+ projects**, and **6,640+ credits issued**!`;
+    return `**Pixefy** (https://pixefy.tortor.org/) is an AI-powered design and image-editing SaaS I launched in **August 2026** during my summer break! It helps sublimation printers and jersey creators upscale images, clean patterns, extract vectors, and preview 3D mockups. So far, it has reached **₱9,045+ in approved revenue**, **1,088+ registered users**, and **279+ projects created**!`;
   }
   if (q.includes('waterwatch') || q.includes('capstone') || q.includes('gis')) {
     return `My 4th-year Capstone Project is **WaterWatch: A Web-GIS Platform for Water Source Monitoring and Quality Forecasting** (https://waterwatch.tortor.org/). I serve as the **Lead Programmer**, building the interactive geospatial map for Maasin City water sources, real-time quality tracking, and time-series water quality forecasting as a Progressive Web App (PWA).`;
@@ -560,7 +560,7 @@ export const Hero: React.FC = () => {
           <div className="h-px bg-gray-100 mb-10" />
 
           {/* Quick Stats Row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8 max-w-4xl mx-auto">
             <div className="bg-gray-50 border border-gray-100 rounded-2xl p-4 text-center hover:border-blue-100 hover:bg-white hover:shadow-sm transition-all">
               <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-gray-400">
                 Pixefy SaaS Revenue
@@ -568,15 +568,6 @@ export const Hero: React.FC = () => {
               <p className="text-2xl font-extrabold text-gray-900 mt-1">₱9,045+</p>
               <p className="text-[11px] text-blue-600 font-semibold mt-0.5">
                 1,088+ Users · 279 Projects
-              </p>
-            </div>
-            <div className="bg-gray-50 border border-gray-100 rounded-2xl p-4 text-center hover:border-blue-100 hover:bg-white hover:shadow-sm transition-all">
-              <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-gray-400">
-                Credits Issued
-              </p>
-              <p className="text-2xl font-extrabold text-gray-900 mt-1">6,640+</p>
-              <p className="text-[11px] text-emerald-600 font-semibold mt-0.5">
-                AI Design &amp; Upscaling
               </p>
             </div>
             <div className="bg-gray-50 border border-gray-100 rounded-2xl p-4 text-center hover:border-blue-100 hover:bg-white hover:shadow-sm transition-all">

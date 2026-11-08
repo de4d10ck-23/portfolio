@@ -39,7 +39,7 @@ const SKILL_CARDS = [
     icon: Database,
     title: 'Databases, Auth & Billing Workflows',
     description:
-      'I design relational databases (MySQL, PostgreSQL, Supabase), secure Google OAuth / token authentication, credit-issuance ledgers (6,640+ credits issued on Pixefy), and GCash payment verification panels.',
+      'I design relational databases (MySQL, PostgreSQL, Supabase), secure Google OAuth / token authentication, and GCash payment verification panels.',
   },
   {
     icon: Server,
