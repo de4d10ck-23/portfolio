@@ -49,10 +49,10 @@ function getSmartAIResponse(query: string): string {
     q.includes('photoshop') ||
     q.includes('illustrator')
   ) {
-    return `Yes! In addition to software engineering, I am a **3D animator, video editor, and apparel designer**:\nâ€¢ **3D Animation & Video Editing:** I create 3D animations using **Blender** and edit dynamic videos with **CapCut**. These animations and edits were the primary reason I built an audience of over **60K+ followers on TikTok** and **21K+ subscribers on YouTube**!\nâ€¢ **Apparel & T-Shirt Design:** I design clothes and t-shirts using **CorelDRAW, Adobe Photoshop, and Adobe Illustrator**. This apparel design background gave me the domain knowledge to create **Pixefy SaaS** (with 3D sublimation mockups and pattern cleanups)!`;
+    return `Yes! In addition to software engineering, I am a **3D animator, video editor, and apparel designer**:\n• **3D Animation & Video Editing:** I create 3D animations using **Blender** and edit dynamic videos with **CapCut**. These animations and edits were the primary reason I built an audience of over **60K+ followers on TikTok** and **21K+ subscribers on YouTube**!\n• **Apparel & T-Shirt Design:** I design clothes and t-shirts using **CorelDRAW, Adobe Photoshop, and Adobe Illustrator**. This apparel design background gave me the domain knowledge to create **Pixefy SaaS** (with 3D sublimation mockups and pattern cleanups)!`;
   }
   if (q.includes('pixefy') || q.includes('saas') || q.includes('revenue')) {
-    return `**Pixefy** (https://pixefy.tortor.org/) is an AI-powered design and image-editing SaaS I launched in **August 2026** during my summer break! It helps sublimation printers and jersey creators upscale images, clean patterns, extract vectors, and preview 3D mockups. So far, it has reached **â‚±9,045+ in approved revenue**, **1,088+ registered users**, and **279+ projects created**!`;
+    return `**Pixefy** (https://pixefy.tortor.org/) is an AI-powered design and image-editing SaaS I launched in **August 2026** during my summer break! It helps sublimation printers and jersey creators upscale images, clean patterns, extract vectors, and preview 3D mockups. So far, it has reached **₱9,045+ in approved revenue**, **1,088+ registered users**, and **279+ projects created**!`;
   }
   if (q.includes('ehuwat') || q.includes('transit') || q.includes('radar') || q.includes('commute') || q.includes('huwat')) {
     return `**E-Huwat** (http://ehuwat.tortor.org/) is my ongoing **Community Transit Radar & GPS Hailing PWA** for Sogod and Southern Leyte! It solves everyday transit waits by enabling commuters (especially SLSU students and locals) to broadcast a live **'Ga-Huwat Ko!' GPS pin** to nearby drivers, tracking Tricycles, Multicabs, Vans, and Buses in real-time.`;
@@ -61,7 +61,7 @@ function getSmartAIResponse(query: string): string {
     return `My 4th-year Capstone Project is **WaterWatch: A Web-GIS Platform for Water Source Monitoring and Quality Forecasting** (https://waterwatch.tortor.org/). I serve as the **Lead Programmer**, building the interactive geospatial map for Maasin City water sources, real-time quality tracking, and time-series water quality forecasting as a Progressive Web App (PWA).`;
   }
   if (q.includes('coursera') || q.includes('certification') || q.includes('online course')) {
-    return `I hold **11 verified Coursera certifications**, including:\nâ€¢ **Google AI Essentials Specialization (5 Courses):** Prompt engineering, generative AI tools, responsible AI, and AI fundamentals.\nâ€¢ **The Arduino Platform and C Programming (UC Irvine):** Embedded C programming and microcontroller hardware.\nâ€¢ **Introduction to Web Development (IBM):** HTML, CSS & JavaScript.\nâ€¢ **Data Analytics Foundations (IBM):** Data pipelines and insights.\nâ€¢ **Introduction to IT Security (Akamai):** Cloud defense and threat modeling.\nAll 11 certificates can be viewed and verified with official links in my Certificates section!`;
+    return `I hold **11 verified Coursera certifications**, including:\n• **Google AI Essentials Specialization (5 Courses):** Prompt engineering, generative AI tools, responsible AI, and AI fundamentals.\n• **The Arduino Platform and C Programming (UC Irvine):** Embedded C programming and microcontroller hardware.\n• **Introduction to Web Development (IBM):** HTML, CSS & JavaScript.\n• **Data Analytics Foundations (IBM):** Data pipelines and insights.\n• **Introduction to IT Security (Akamai):** Cloud defense and threat modeling.\nAll 11 certificates can be viewed and verified with official links in my Certificates section!`;
   }
   if (
     q.includes('competition') ||
@@ -69,7 +69,7 @@ function getSmartAIResponse(query: string): string {
     q.includes('certificate') ||
     q.includes('evco')
   ) {
-    return `Here are my college competition highlights from 1st to 3rd year:\nâ€¢ **3rd Year:** ðŸ† **1st Place Champion** â€” Programming Skills Competition (FCSIT Day)\nâ€¢ **2nd Year:** ðŸ¥ˆ **2nd Place & Trophy** â€” 2nd EVCO 2024 (C Language Strand) representing SLSU\nâ€¢ **1st Year:** ðŸ¥ˆ **2nd Place** â€” OS Installation Competition (FCIS 1st Year Culmination)`;
+    return `Here are my college competition highlights from 1st to 3rd year:\n• **3rd Year:** 🏆 **1st Place Champion** — Programming Skills Competition (FCSIT Day)\n• **2nd Year:** 🥈 **2nd Place & Trophy** — 2nd EVCO 2024 (C Language Strand) representing SLSU\n• **1st Year:** 🥈 **2nd Place** — OS Installation Competition (FCIS 1st Year Culmination)`;
   }
   if (q.includes('school') || q.includes('course') || q.includes('slsu')) {
     return `I am currently a **4th-year BS Information Technology (Major in Programming) student at Southern Leyte State University (SLSU)**, focusing on full-stack web applications, SaaS platforms, Web-GIS, and embedded IoT systems!`;
@@ -81,18 +81,18 @@ function getSmartAIResponse(query: string): string {
     q.includes('esp32') ||
     q.includes('hardware')
   ) {
-    return `Some of my favorite IoT & embedded hardware builds include:\nâ€¢ **Smart ESP32 Aeroponics System:** Controlled via smartphone to set misting timers and schedules.\nâ€¢ **Phone-Controlled Mini RC Robot:** A commissioned student project I built in 3rd year that calculates real-time distance traveled using calibrated Servo Motors.`;
+    return `Some of my favorite IoT & embedded hardware builds include:\n• **Smart ESP32 Aeroponics System:** Controlled via smartphone to set misting timers and schedules.\n• **Phone-Controlled Mini RC Robot:** A commissioned student project I built in 3rd year that calculates real-time distance traveled using calibrated Servo Motors.`;
   }
   if (q.includes('github') || q.includes('repo') || q.includes('git') || q.includes('code') || q.includes('commits')) {
     return `You can check out my active GitHub profile at **https://github.com/de4d10ck-23** (@de4d10ck-23)! I have **36 public repositories** and **675 contributions in the last year**. My core repositories include **Pixefy SaaS**, **capstone_backend**, **binanceTelegramBot**, **metatrader5TelegramBot**, and **BHMS**!`;
   }
   if (q.includes('tiktok') || q.includes('youtube') || q.includes('creator')) {
-    return `I grew a community of **60,000+ followers on TikTok** and **21,000+ subscribers on YouTube** through my **3D animations in Blender** and **video edits in CapCut**, earning **â‚±6,000+ from TikTok Affiliate**! I paused uploading in my 2nd year of college to focus 100% on competitive programming and my BSIT degree.`;
+    return `I grew a community of **60,000+ followers on TikTok** and **21,000+ subscribers on YouTube** through my **3D animations in Blender** and **video edits in CapCut**, earning **₱6,000+ from TikTok Affiliate**! I paused uploading in my 2nd year of college to focus 100% on competitive programming and my BSIT degree.`;
   }
   if (q.includes('contact') || q.includes('email') || q.includes('phone') || q.includes('hire')) {
     return `You can reach me directly at **johnlloydttortor@gmail.com** or call/text **0953 987 0591**. I live in **San Vicente, Bontoc, Southern Leyte** and I'm open to software, SaaS, Web-GIS, and IoT/ESP32 projects or developer opportunities!`;
   }
-  return `Hi! I'm **AI John** â€” John Lloyd T. Tortor's portfolio assistant. John is a **4th-year BS InfoTech (Programming) student at SLSU**, founder of **Pixefy SaaS (â‚±9,045+ revenue, 1,088+ users)**, Lead Programmer of **WaterWatch Web-GIS**, **1st Place FCSIT Programming Champion**, **2nd Place EVCO 2024 (C Strand)**, and content creator (**60K+ TikTok, 21K+ YouTube**). Check his GitHub at **@de4d10ck-23** (675 contributions) or ask me anything!`;
+  return `Hi! I'm **AI John** — John Lloyd T. Tortor's portfolio assistant. John is a **4th-year BS InfoTech (Programming) student at SLSU**, founder of **Pixefy SaaS (₱9,045+ revenue, 1,088+ users)**, Lead Programmer of **WaterWatch Web-GIS**, **1st Place FCSIT Programming Champion**, **2nd Place EVCO 2024 (C Strand)**, and content creator (**60K+ TikTok, 21K+ YouTube**). Check his GitHub at **@de4d10ck-23** (675 contributions) or ask me anything!`;
 }
 
 // Generate deterministic 52-week contribution data matching user's real GitHub screenshot (@de4d10ck-23: 675 contributions)
@@ -290,7 +290,7 @@ export const Hero: React.FC = () => {
                   Hi, I&apos;m AI JOHN
                 </p>
                 <p className="text-[11px] text-green-500 font-medium mt-0.5">
-                  Online Â· Ask me anything about John Lloyd
+                  Online · Ask me anything about John Lloyd
                 </p>
               </div>
             </div>
@@ -451,7 +451,7 @@ export const Hero: React.FC = () => {
                     ACADEMIC &amp; INSTITUTION
                   </p>
                   <p className="text-[13px] text-gray-800 font-bold">
-                    4th Year BS InfoTech (Programming) Â· SLSU
+                    4th Year BS InfoTech (Programming) · SLSU
                   </p>
                 </div>
               </div>
@@ -463,7 +463,7 @@ export const Hero: React.FC = () => {
                     DESIGNATION &amp; VENTURES
                   </p>
                   <p className="text-[13px] text-gray-800 font-semibold">
-                    Founder @ Pixefy SaaS Â· Capstone Lead Programmer Â· 3D Animator &amp; Apparel Designer
+                    Founder @ Pixefy SaaS · Capstone Lead Programmer · 3D Animator &amp; Apparel Designer
                   </p>
                 </div>
               </div>
@@ -480,15 +480,27 @@ export const Hero: React.FC = () => {
               <div className="flex items-center gap-3">
                 <Trophy className="w-3.5 h-3.5 text-amber-500 flex-shrink-0" />
                 <span className="text-[13px] text-gray-600 font-medium">
-                  1st Place FCSIT Coding Â· 2nd Place EVCO 2024 (C Strand) Â· 2nd Place OS Installation
+                  1st Place FCSIT Coding · 2nd Place EVCO 2024 (C Strand) · 2nd Place OS Installation
                 </span>
               </div>
               <div className="flex items-center gap-3">
                 <Video className="w-3.5 h-3.5 text-rose-500 flex-shrink-0" />
                 <span className="text-[13px] text-gray-500">
                   Animator &amp; Editor: <strong className="text-gray-700">60K+ TikTok</strong> &amp;{' '}
-                  <strong className="text-gray-700">21K+ YouTube</strong> (Blender Â· CapCut Â· Apparel)
+                  <strong className="text-gray-700">21K+ YouTube</strong> (Blender · CapCut · Apparel)
                 </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <ExternalLink className="w-3.5 h-3.5 text-blue-600 flex-shrink-0" />
+                <a
+                  href="https://canva.link/892fqjf9vpdl4wf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[13px] text-gray-800 font-semibold underline underline-offset-4 hover:text-blue-600 flex items-center gap-1.5 transition-colors"
+                >
+                  <span>Canva Portfolio Presentation</span>
+                  <ExternalLink className="w-3 h-3 text-gray-400" />
+                </a>
               </div>
             </div>
           </div>
@@ -575,9 +587,9 @@ export const Hero: React.FC = () => {
               <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-gray-400">
                 Pixefy SaaS Revenue
               </p>
-              <p className="text-2xl font-extrabold text-gray-900 mt-1">â‚±9,045+</p>
+              <p className="text-2xl font-extrabold text-gray-900 mt-1">₱9,045+</p>
               <p className="text-[11px] text-blue-600 font-semibold mt-0.5">
-                1,088+ Users Â· 279 Projects
+                1,088+ Users · 279 Projects
               </p>
             </div>
             <div className="bg-gray-50 border border-gray-100 rounded-2xl p-4 text-center hover:border-blue-100 hover:bg-white hover:shadow-sm transition-all">
@@ -586,7 +598,7 @@ export const Hero: React.FC = () => {
               </p>
               <p className="text-2xl font-extrabold text-gray-900 mt-1">3 Awards</p>
               <p className="text-[11px] text-amber-600 font-semibold mt-0.5">
-                1st FCSIT Â· 2nd EVCO Â· 2nd OS
+                1st FCSIT · 2nd EVCO · 2nd OS
               </p>
             </div>
             <div className="bg-gray-50 border border-gray-100 rounded-2xl p-4 text-center hover:border-blue-100 hover:bg-white hover:shadow-sm transition-all">
@@ -595,7 +607,7 @@ export const Hero: React.FC = () => {
               </p>
               <p className="text-2xl font-extrabold text-gray-900 mt-1">81K+ Total</p>
               <p className="text-[11px] text-rose-600 font-semibold mt-0.5">
-                60K TikTok Â· 21K YouTube Â· Blender &amp; CapCut
+                60K TikTok · 21K YouTube · Blender &amp; CapCut
               </p>
             </div>
           </div>
@@ -623,7 +635,7 @@ export const Hero: React.FC = () => {
                       </span>
                     </div>
                     <p className="text-[12px] text-gray-300">
-                      John Lloyd T. Tortor Â· 36 repositories Â· 2 followers Â· 2 following
+                      John Lloyd T. Tortor · 36 repositories · 2 followers · 2 following
                     </p>
                   </div>
                 </div>
@@ -652,7 +664,7 @@ export const Hero: React.FC = () => {
                     </span>
                   </div>
                   <span className="text-[11px] font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100">
-                    Peak Activity: July â€“ Nov 2026
+                    Peak Activity: July – Nov 2026
                   </span>
                 </div>
 
