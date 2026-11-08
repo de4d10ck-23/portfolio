@@ -240,12 +240,6 @@ export const Hero: React.FC = () => {
     reader.readAsDataURL(file);
   };
 
-  const quickPrompts = [
-    'What competitions did you win?',
-    'Tell me about WaterWatch & IoT',
-    'How can I contact you?',
-  ];
-
   return (
     <header className="bg-white">
       {/* Top AI Chat Assistant Section (same layout & styling as jemcdyn.vercel.app) */}
@@ -281,18 +275,6 @@ export const Hero: React.FC = () => {
                 </p>
               </div>
             </div>
-            <div className="hidden sm:flex items-center gap-1.5">
-              {quickPrompts.slice(0, 2).map((prompt) => (
-                <button
-                  key={prompt}
-                  type="button"
-                  onClick={() => sendMessage(prompt)}
-                  className="text-[11px] font-medium text-gray-600 hover:text-blue-600 bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-200 px-2.5 py-1 rounded-full transition-all duration-150"
-                >
-                  {prompt}
-                </button>
-              ))}
-            </div>
           </div>
 
           <div
@@ -303,22 +285,10 @@ export const Hero: React.FC = () => {
             }}
           >
             {messages.length === 0 ? (
-              <div className="flex flex-col items-center justify-center min-h-[44px] gap-2">
+              <div className="flex flex-col items-center justify-center min-h-[44px]">
                 <p className="text-center text-gray-500 text-[12px] md:text-[13px]">
                   Ask me about my SaaS (Pixefy), WaterWatch Capstone, competitions, or IoT projects...
                 </p>
-                <div className="flex flex-wrap justify-center gap-1.5">
-                  {quickPrompts.map((p) => (
-                    <button
-                      key={p}
-                      type="button"
-                      onClick={() => sendMessage(p)}
-                      className="text-[11px] bg-white/90 hover:bg-white text-gray-600 hover:text-blue-600 border border-gray-200 px-2.5 py-0.5 rounded-full transition-colors shadow-sm"
-                    >
-                      {p}
-                    </button>
-                  ))}
-                </div>
               </div>
             ) : (
               messages.map((msg, idx) => (
