@@ -1,7 +1,29 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, ArrowUp, Globe, Sparkles, Github } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowUp, Globe, Sparkles, Github, Radio, Bot, ExternalLink, Trophy } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+
+const TikTokIcon: React.FC<{ className?: string }> = ({ className = 'w-3.5 h-3.5' }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    aria-hidden="true"
+  >
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.69 6.34 6.34 0 0 0 9.35 22a6.33 6.33 0 0 0 6.34-6.31V9.22a8.16 8.16 0 0 0 4.9 1.62V7.4a4.83 4.83 0 0 1-1-.71z" />
+  </svg>
+);
+
+const YouTubeIcon: React.FC<{ className?: string }> = ({ className = 'w-3.5 h-3.5' }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    aria-hidden="true"
+  >
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+  </svg>
+);
 
 export const ContactFooter: React.FC = () => {
   return (
@@ -139,8 +161,17 @@ export const ContactFooter: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gray-100 hover:bg-gray-900 text-gray-700 hover:text-white text-[12px] font-semibold transition-all duration-200"
                     >
-                      <Sparkles className="w-3.5 h-3.5" />
+                      <Sparkles className="w-3.5 h-3.5 text-amber-500" />
                       <span>Pixefy SaaS</span>
+                    </a>
+                    <a
+                      href="http://ehuwat.tortor.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gray-100 hover:bg-gray-900 text-gray-700 hover:text-white text-[12px] font-semibold transition-all duration-200"
+                    >
+                      <Radio className="w-3.5 h-3.5 text-emerald-500" />
+                      <span>E-Huwat Radar</span>
                     </a>
                     <a
                       href="https://waterwatch.tortor.org/"
@@ -148,8 +179,44 @@ export const ContactFooter: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gray-100 hover:bg-gray-900 text-gray-700 hover:text-white text-[12px] font-semibold transition-all duration-200"
                     >
-                      <Globe className="w-3.5 h-3.5" />
+                      <Globe className="w-3.5 h-3.5 text-blue-500" />
                       <span>WaterWatch Web-GIS</span>
+                    </a>
+                    <a
+                      href="https://www.mql5.com/en/market/product/180408?source=Site+Profile"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gray-100 hover:bg-gray-900 text-gray-700 hover:text-white text-[12px] font-semibold transition-all duration-200"
+                    >
+                      <Bot className="w-3.5 h-3.5 text-indigo-500" />
+                      <span>Smart Trading (MQL5)</span>
+                    </a>
+                    <a
+                      href="https://www.tiktok.com/@jltteditz"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gray-100 hover:bg-black text-gray-700 hover:text-white text-[12px] font-semibold transition-all duration-200 group"
+                    >
+                      <TikTokIcon className="w-3.5 h-3.5 text-gray-700 group-hover:text-[#00f2fe]" />
+                      <span>TikTok (@jltteditz)</span>
+                    </a>
+                    <a
+                      href="https://www.youtube.com/@whuttOfficial"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gray-100 hover:bg-red-600 text-gray-700 hover:text-white text-[12px] font-semibold transition-all duration-200 group"
+                    >
+                      <YouTubeIcon className="w-3.5 h-3.5 text-red-600 group-hover:text-white" />
+                      <span>YouTube (@whuttOfficial)</span>
+                    </a>
+                    <a
+                      href="https://canva.link/892fqjf9vpdl4wf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gray-100 hover:bg-purple-600 text-gray-700 hover:text-white text-[12px] font-semibold transition-all duration-200"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5 text-purple-500" />
+                      <span>Canva Portfolio</span>
                     </a>
                     <a
                       href="https://www.facebook.com/southernleytestateu/posts/pfbid0M9D1Xsx3L3VrRntczMzF2qhdTwQ9xSKE1cLux5Ahv3XzE8DgU84g3C2SpdaM7zdxl"
@@ -157,6 +224,7 @@ export const ContactFooter: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gray-100 hover:bg-blue-600 text-gray-700 hover:text-white text-[12px] font-semibold transition-all duration-200"
                     >
+                      <Trophy className="w-3.5 h-3.5 text-amber-500" />
                       <span>EVCO 2024 Post</span>
                     </a>
                   </div>
@@ -219,7 +287,7 @@ export const ContactFooter: React.FC = () => {
                 href={PERSONAL_INFO.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[12px] font-medium text-blue-400 hover:text-blue-300 transition-colors duration-150 flex items-center gap-1"
+                className="text-[12px] font-medium text-gray-300 hover:text-white transition-colors duration-150 flex items-center gap-1.5"
               >
                 <Github className="w-3.5 h-3.5" />
                 <span>GitHub</span>
@@ -228,16 +296,18 @@ export const ContactFooter: React.FC = () => {
                 href="https://www.tiktok.com/@jltteditz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[12px] font-medium text-rose-400 hover:text-rose-300 transition-colors duration-150 flex items-center gap-1"
+                className="text-[12px] font-medium text-gray-300 hover:text-[#00f2fe] transition-colors duration-150 flex items-center gap-1.5"
               >
+                <TikTokIcon className="w-3.5 h-3.5" />
                 <span>TikTok (@jltteditz)</span>
               </a>
               <a
                 href="https://www.youtube.com/@whuttOfficial"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[12px] font-medium text-red-400 hover:text-red-300 transition-colors duration-150 flex items-center gap-1"
+                className="text-[12px] font-medium text-gray-300 hover:text-red-400 transition-colors duration-150 flex items-center gap-1.5"
               >
+                <YouTubeIcon className="w-3.5 h-3.5" />
                 <span>YouTube (@whuttOfficial)</span>
               </a>
             </div>
