@@ -61,7 +61,7 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
               Featured Projects
             </h2>
             <p className="max-w-xl text-[15px] leading-relaxed text-gray-500">
-              From our live AI SaaS platform (<strong>Pixefy</strong>) and real-time community transit radar (<strong>E-Huwat</strong>) to our 4th-year Capstone Web-GIS (<strong>WaterWatch</strong>) and embedded ESP32 IoT hardware builds.
+              From our live AI SaaS platform (<strong>Pixefy</strong>) and MQL5 automated intraday engine (<strong>Smart Trading</strong> with Grok AI) to real-time community transit (<strong>E-Huwat</strong>) and our 4th-year Capstone Web-GIS (<strong>WaterWatch</strong>).
             </p>
             <div className="flex items-center gap-2 mt-2">
               <div className="w-10 h-0.5 bg-gray-300 rounded-full" />

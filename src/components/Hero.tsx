@@ -59,6 +59,9 @@ function getSmartAIResponse(query: string): string {
   if (q.includes('waterwatch') || q.includes('capstone') || q.includes('gis')) {
     return `My 4th-year Capstone Project is **WaterWatch: A Web-GIS Platform for Water Source Monitoring and Quality Forecasting** (https://waterwatch.tortor.org/). I serve as the **Lead Programmer**, building the interactive geospatial map for Maasin City water sources, real-time quality tracking, and time-series water quality forecasting as a Progressive Web App (PWA).`;
   }
+  if (q.includes('smart trading') || q.includes('trading') || q.includes('bot') || q.includes('grok') || q.includes('mql5') || q.includes('mt5')) {
+    return `**Smart Trading** (https://www.mql5.com/en/market/product/180408) is my advanced automated intraday trading engine published on the **MQL5 Marketplace**! Unlike simple indicator bots, it feeds live MT5 multi-timeframe OHLCV (H4, H1, M15, M5) and ATR metrics directly into **Grok AI models** to determine high-probability setups before executing. It features complete remote **Telegram control** (/quick, /positions, /ai_result, /performance) and strict capital preservation.`;
+  }
   if (q.includes('coursera') || q.includes('certification') || q.includes('online course')) {
     return `I hold **11 verified Coursera certifications**, including:\n• **Google AI Essentials Specialization (5 Courses):** Prompt engineering, generative AI tools, responsible AI, and AI fundamentals.\n• **The Arduino Platform and C Programming (UC Irvine):** Embedded C programming and microcontroller hardware.\n• **Introduction to Web Development (IBM):** HTML, CSS & JavaScript.\n• **Data Analytics Foundations (IBM):** Data pipelines and insights.\n• **Introduction to IT Security (Akamai):** Cloud defense and threat modeling.\nAll 11 certificates can be viewed and verified with official links in my Certificates section!`;
   }
