@@ -7,7 +7,6 @@ import {
   Mic,
   Send,
   Sparkles,
-  Camera,
   Trophy,
   Video,
   Check,
@@ -130,16 +129,6 @@ export const Hero: React.FC = () => {
   const chatEndRef = useRef<HTMLDivElement | null>(null);
   const recognitionRef = useRef<any>(null);
 
-  // Portrait upload state (persisted in localStorage so user can customize anytime)
-  const [customPortrait, setCustomPortrait] = useState<string | null>(() => {
-    try {
-      return localStorage.getItem('jlt_custom_portrait');
-    } catch {
-      return null;
-    }
-  });
-  const fileInputRef = useRef<HTMLInputElement | null>(null);
-
   // Typewriter effect
   const [roleIndex, setRoleIndex] = useState(0);
   const [typedText, setTypedText] = useState('');
@@ -241,22 +230,6 @@ export const Hero: React.FC = () => {
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     sendMessage(input);
-  };
-
-  const handlePortraitUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = () => {
-      const result = reader.result as string;
-      setCustomPortrait(result);
-      try {
-        localStorage.setItem('jlt_custom_portrait', result);
-      } catch {
-        // ignore storage quota errors
-      }
-    };
-    reader.readAsDataURL(file);
   };
 
   return (
@@ -534,28 +507,10 @@ export const Hero: React.FC = () => {
                 <div className="relative overflow-hidden rounded-3xl border-2 border-gray-100 bg-white shadow-2xl transition-transform duration-500 ease-in-out group-hover:scale-[1.02]">
                   <img
                     alt={PERSONAL_INFO.shortName}
-                    src={customPortrait || PERSONAL_INFO.avatarUrl}
+                    src={PERSONAL_INFO.avatarUrl}
                     className="h-[21rem] sm:h-[25rem] lg:h-[28rem] w-[260px] sm:w-[300px] lg:w-[330px] object-cover object-top"
                   />
                 </div>
-
-                {/* Optional Upload Custom Portrait Button on Hover */}
-                <input
-                  ref={fileInputRef}
-                  type="file"
-                  accept="image/*"
-                  onChange={handlePortraitUpload}
-                  className="hidden"
-                />
-                <button
-                  type="button"
-                  onClick={() => fileInputRef.current?.click()}
-                  title="Upload your own portrait photo"
-                  className="absolute top-3 right-3 bg-white/95 hover:bg-gray-900 text-gray-700 hover:text-white border border-gray-200 shadow-md px-3 py-1.5 rounded-full text-[11px] font-semibold flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-all duration-200"
-                >
-                  <Camera className="w-3.5 h-3.5" />
-                  <span>{customPortrait ? 'Change Photo' : 'Upload Photo'}</span>
-                </button>
               </div>
             </div>
 

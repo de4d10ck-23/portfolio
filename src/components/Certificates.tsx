@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowRight, ArrowUpRight, Upload, Eye } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, Eye } from 'lucide-react';
 import { CERTIFICATES_DATA, CertificateItem } from '../data/portfolioData';
 
 export const Certificates: React.FC<{ onPreviewImage: (src: string, title: string) => void }> = ({
@@ -20,18 +20,6 @@ export const Certificates: React.FC<{ onPreviewImage: (src: string, title: strin
     if (activeFilter === 'all') return true;
     return cert.category === activeFilter;
   });
-
-  // Allow user to upload/replace certificate photos right in the browser
-  const [customCertImages, setCustomCertImages] = useState<Record<string, string>>(() => {
-    try {
-      const saved = localStorage.getItem('jlt_custom_certs');
-      return saved ? JSON.parse(saved) : {};
-    } catch {
-      return {};
-    }
-  });
-  const [uploadingCertId, setUploadingCertId] = useState<string | null>(null);
-  const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const scrollTo = useCallback(
     (index: number) => emblaApi && emblaApi.scrollTo(index),
@@ -61,44 +49,11 @@ export const Certificates: React.FC<{ onPreviewImage: (src: string, title: strin
     emblaApi.on('reInit', onSelect);
   }, [emblaApi, onSelect]);
 
-  const handleTriggerUpload = (certId: string, e: React.MouseEvent) => {
-    e.stopPropagation();
-    setUploadingCertId(certId);
-    fileInputRef.current?.click();
-  };
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file || !uploadingCertId) return;
-    const reader = new FileReader();
-    reader.onload = () => {
-      const dataUrl = reader.result as string;
-      setCustomCertImages((prev) => {
-        const updated = { ...prev, [uploadingCertId]: dataUrl };
-        try {
-          localStorage.setItem('jlt_custom_certs', JSON.stringify(updated));
-        } catch {
-          // ignore storage quota
-        }
-        return updated;
-      });
-      setUploadingCertId(null);
-    };
-    reader.readAsDataURL(file);
-  };
-
   return (
     <section
       className="py-16 md:py-28 px-4 md:px-8 bg-[#f8f8f6] relative overflow-hidden"
       id="certificates"
     >
-      <input
-        ref={fileInputRef}
-        type="file"
-        accept="image/*"
-        onChange={handleFileChange}
-        className="hidden"
-      />
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-32 -left-32 w-[400px] h-[400px] rounded-full bg-blue-50 opacity-70 blur-3xl" />
         <div className="absolute -bottom-24 -right-24 w-[350px] h-[350px] rounded-full bg-indigo-50 opacity-60 blur-3xl" />
@@ -166,7 +121,6 @@ export const Certificates: React.FC<{ onPreviewImage: (src: string, title: strin
             <div className="flex items-center py-4">
               {filteredCerts.map((cert: CertificateItem, idx: number) => {
                 const isActive = idx === selectedIndex;
-                const displayImg = customCertImages[cert.id] || cert.img;
 
                 return (
                   <div
@@ -188,7 +142,7 @@ export const Certificates: React.FC<{ onPreviewImage: (src: string, title: strin
                       >
                         <img
                           alt={cert.title}
-                          src={displayImg}
+                          src={cert.img}
                           className="h-full w-full object-contain p-2 transition-transform duration-500 group-hover:scale-[1.03]"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -210,20 +164,12 @@ export const Certificates: React.FC<{ onPreviewImage: (src: string, title: strin
                                 type="button"
                                 onClick={(e) => {
                                   e.stopPropagation();
-                                  onPreviewImage(displayImg, cert.title);
+                                  onPreviewImage(cert.img, cert.title);
                                 }}
                                 title="View Full Certificate"
                                 className="bg-white hover:bg-gray-100 rounded-full p-2 shadow-md text-gray-800"
                               >
                                 <Eye className="w-3.5 h-3.5" />
-                              </button>
-                              <button
-                                type="button"
-                                onClick={(e) => handleTriggerUpload(cert.id, e)}
-                                title="Upload your certificate scan/photo"
-                                className="bg-white hover:bg-blue-600 text-gray-800 hover:text-white rounded-full p-2 shadow-md transition-colors"
-                              >
-                                <Upload className="w-3.5 h-3.5" />
                               </button>
                             </div>
                             <div className="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2">
@@ -231,18 +177,11 @@ export const Certificates: React.FC<{ onPreviewImage: (src: string, title: strin
                                 type="button"
                                 onClick={(e) => {
                                   e.stopPropagation();
-                                  onPreviewImage(displayImg, cert.title);
+                                  onPreviewImage(cert.img, cert.title);
                                 }}
                                 className="text-[10px] font-bold tracking-widest uppercase text-white bg-black/50 hover:bg-black/75 backdrop-blur-sm px-3 py-1 rounded-full"
                               >
                                 View Certificate
-                              </button>
-                              <button
-                                type="button"
-                                onClick={(e) => handleTriggerUpload(cert.id, e)}
-                                className="text-[10px] font-bold tracking-wider uppercase text-white bg-blue-600/85 hover:bg-blue-600 backdrop-blur-sm px-3 py-1 rounded-full"
-                              >
-                                {customCertImages[cert.id] ? 'Change Photo' : 'Upload Scan'}
                               </button>
                             </div>
                           </>
