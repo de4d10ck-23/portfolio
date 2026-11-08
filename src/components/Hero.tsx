@@ -520,7 +520,7 @@ export const Hero: React.FC = () => {
 
               {/* Portrait Container with John Lloyd's Real Photo */}
               <div className="relative group flex items-center justify-center">
-                <div className="relative overflow-hidden rounded-3xl border-2 border-gray-100 bg-white shadow-2xl transition-transform duration-500 ease-in-out group-hover:scale-[1.02]">
+                <div className="relative overflow-hidden rounded-3xl border-2 border-gray-100 bg-gradient-to-b from-blue-50/40 via-gray-50 to-white shadow-2xl transition-transform duration-500 ease-in-out group-hover:scale-[1.02]">
                   <img
                     alt={PERSONAL_INFO.shortName}
                     src={PERSONAL_INFO.avatarUrl}

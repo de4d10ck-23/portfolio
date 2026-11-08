@@ -70,7 +70,7 @@ export const PERSONAL_INFO = {
   githubUsername: "de4d10ck-23",
   githubUrl: "https://github.com/de4d10ck-23",
   canvaPortfolioUrl: "https://canva.link/892fqjf9vpdl4wf",
-  avatarUrl: "/images/john-lloyd-photo.jpg",
+  avatarUrl: "/images/john-lloyd-photo.png",
 };
 
 export const PROJECTS_DATA: ProjectItem[] = [
