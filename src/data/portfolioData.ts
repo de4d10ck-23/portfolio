@@ -151,7 +151,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
   },
   {
     id: "smart-trading",
-    img: "/projects/smart-trading-preview.svg",
+    img: "/projects/smart-trading.png",
     badge: "MQL5 Marketplace · Automated AI Trading Engine",
     title: "SMART TRADING — AI INTRADAY BOT",
     subtitle: "Grok AI Multi-Timeframe Intraday Engine with Telegram Control",
