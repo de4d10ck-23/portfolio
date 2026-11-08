@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Trophy, Code2, Sparkles, ArrowRight } from 'lucide-react';
+import { GraduationCap, Trophy, Code2, Sparkles, ArrowRight, Github } from 'lucide-react';
+import { PERSONAL_INFO } from '../data/portfolioData';
 
 export const ResumeSection: React.FC = () => {
   const highlights = [
@@ -52,6 +53,16 @@ export const ResumeSection: React.FC = () => {
             >
               <span>Get In Touch</span>
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" />
+            </a>
+            <span className="text-gray-300">·</span>
+            <a
+              href={PERSONAL_INFO.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-gray-700 hover:text-gray-900 transition-colors"
+            >
+              <Github className="w-3.5 h-3.5" />
+              <span>github.com/{PERSONAL_INFO.githubUsername}</span>
             </a>
           </div>
         </motion.div>

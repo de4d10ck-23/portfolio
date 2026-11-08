@@ -63,6 +63,9 @@ export const PERSONAL_INFO = {
   affiliateEarnings: "₱6,000+",
   pixefyRevenue: "₱9,045+",
   pixefyUsers: "1,088+",
+  githubUsername: "de4d10ck-23",
+  githubUrl: "https://github.com/de4d10ck-23",
+  avatarUrl: "/images/john-lloyd-photo.jpg",
 };
 
 export const PROJECTS_DATA: ProjectItem[] = [

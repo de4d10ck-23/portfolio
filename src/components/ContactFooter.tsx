@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, ArrowUp, Globe, Sparkles } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowUp, Globe, Sparkles, Github } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 export const ContactFooter: React.FC = () => {
@@ -85,6 +85,25 @@ export const ContactFooter: React.FC = () => {
 
                   <div className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center flex-shrink-0">
+                      <Github className="w-4 h-4 text-gray-600" />
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-gray-400 mb-0.5">
+                        GitHub Profile
+                      </p>
+                      <a
+                        href={PERSONAL_INFO.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[14px] font-medium text-gray-900 hover:text-blue-600 transition-colors"
+                      >
+                        github.com/{PERSONAL_INFO.githubUsername} (675 contributions · 36 repos)
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-4 h-4 text-gray-600" />
                     </div>
                     <div>
@@ -105,6 +124,15 @@ export const ContactFooter: React.FC = () => {
                     Live Platforms &amp; Social Highlights
                   </p>
                   <div className="flex flex-wrap gap-2">
+                    <a
+                      href={PERSONAL_INFO.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gray-900 hover:bg-gray-800 text-white text-[12px] font-semibold transition-all duration-200 shadow-sm"
+                    >
+                      <Github className="w-3.5 h-3.5" />
+                      <span>GitHub (@{PERSONAL_INFO.githubUsername})</span>
+                    </a>
                     <a
                       href="https://pixefy.tortor.org/"
                       target="_blank"
@@ -194,6 +222,15 @@ export const ContactFooter: React.FC = () => {
                 className="text-[12px] font-medium text-gray-400 hover:text-white transition-colors duration-150"
               >
                 Contact
+              </a>
+              <a
+                href={PERSONAL_INFO.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[12px] font-medium text-blue-400 hover:text-blue-300 transition-colors duration-150 flex items-center gap-1"
+              >
+                <Github className="w-3.5 h-3.5" />
+                <span>GitHub</span>
               </a>
             </div>
           </div>

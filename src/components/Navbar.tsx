@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, ExternalLink } from 'lucide-react';
+import { Menu, X, ExternalLink, Github } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 export const Navbar: React.FC = () => {
@@ -43,6 +43,16 @@ export const Navbar: React.FC = () => {
         </ul>
 
         <div className="hidden lg:flex items-center gap-2">
+          <a
+            href={PERSONAL_INFO.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub Profile (@de4d10ck-23)"
+            className="flex items-center gap-1.5 text-[12px] font-semibold text-gray-700 hover:text-gray-900 px-3 py-1.5 rounded-lg hover:bg-gray-100 transition-all duration-150"
+          >
+            <Github className="w-4 h-4" />
+            <span>GitHub</span>
+          </a>
           <a
             href="https://waterwatch.tortor.org/"
             target="_blank"
@@ -92,7 +102,16 @@ export const Navbar: React.FC = () => {
               </li>
             ))}
           </ul>
-          <div className="flex items-center gap-2 pt-3 border-t border-gray-100">
+          <div className="flex flex-wrap items-center gap-2 pt-3 border-t border-gray-100">
+            <a
+              href={PERSONAL_INFO.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-[12px] font-semibold text-gray-800 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-lg transition-all duration-150"
+            >
+              <Github className="w-3.5 h-3.5" />
+              <span>GitHub</span>
+            </a>
             <a
               href="https://waterwatch.tortor.org/"
               target="_blank"
