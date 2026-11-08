@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="1254" viewBox="0 0 1254 1254" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">JLTT monogram</title>
+  <desc id="desc">Angular JLTT personal logo in deep navy and royal blue, with a transparent background.</desc>
+  <g fill="#111827">
+    <path id="letter-j" d="M408 326H495L399 422V717C399 815 342 868 269 868C195 868 142 821 132 747L222 661V718C222 755 238 776 264 776C294 776 311 752 311 711V494H238Z"/>
+    <path id="letter-l" d="M494 352V752H706L605 858H356C399 824 415 776 415 717V431Z"/>
+    <path id="top-bar" d="M511 326H871L788 420H511Z"/>
+    <path id="first-t" d="M595 438H881L799 529H746V736H649V529H514Z"/>
+    <path id="second-t" d="M907 435H1150L1068 529H976V756C976 772 972 781 960 793L875 870V529H823Z"/>
+  </g>
+  <g fill="#2563FF">
+    <path id="top-accent" d="M871 326H991L904 420H788Z"/>
+    <path id="bottom-accent" d="M730 752H838L736 858H629Z"/>
+  </g>
+</svg>
