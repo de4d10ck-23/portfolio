@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, ExternalLink, Github } from 'lucide-react';
+import { Menu, X, Github } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 export const Navbar: React.FC = () => {
@@ -52,33 +52,6 @@ export const Navbar: React.FC = () => {
             <Github className="w-4 h-4" />
             <span>GitHub</span>
           </a>
-          <a
-            href="http://ehuwat.tortor.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-[12px] font-semibold text-emerald-700 hover:text-emerald-900 px-3 py-1.5 rounded-lg hover:bg-emerald-50 transition-all duration-150"
-          >
-            E-Huwat Radar
-            <ExternalLink className="w-3 h-3" />
-          </a>
-          <a
-            href="https://waterwatch.tortor.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-[12px] font-semibold text-gray-600 hover:text-blue-600 px-3 py-1.5 rounded-lg hover:bg-blue-50 transition-all duration-150"
-          >
-            WaterWatch
-            <ExternalLink className="w-3 h-3" />
-          </a>
-          <a
-            href="https://pixefy.tortor.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-[12px] font-semibold text-white bg-gray-900 hover:bg-gray-700 px-3.5 py-1.5 rounded-lg transition-all duration-150 shadow-sm"
-          >
-            Pixefy SaaS
-            <ExternalLink className="w-3 h-3" />
-          </a>
         </div>
 
         <button
@@ -110,7 +83,7 @@ export const Navbar: React.FC = () => {
               </li>
             ))}
           </ul>
-          <div className="flex flex-wrap items-center gap-2 pt-3 border-t border-gray-100">
+          <div className="flex items-center gap-2 pt-3 border-t border-gray-100">
             <a
               href={PERSONAL_INFO.githubUrl}
               target="_blank"
@@ -119,33 +92,6 @@ export const Navbar: React.FC = () => {
             >
               <Github className="w-3.5 h-3.5" />
               <span>GitHub</span>
-            </a>
-            <a
-              href="http://ehuwat.tortor.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-[12px] font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-3 py-1.5 rounded-lg transition-all duration-150"
-            >
-              <span>E-Huwat</span>
-              <ExternalLink className="w-3 h-3" />
-            </a>
-            <a
-              href="https://waterwatch.tortor.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-[12px] font-semibold text-gray-600 hover:text-blue-600 px-3 py-1.5 rounded-lg hover:bg-blue-50 transition-all duration-150"
-            >
-              WaterWatch
-              <ExternalLink className="w-3 h-3" />
-            </a>
-            <a
-              href="https://pixefy.tortor.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-[12px] font-semibold text-white bg-gray-900 hover:bg-gray-700 px-3.5 py-1.5 rounded-lg transition-all duration-150"
-            >
-              Pixefy SaaS
-              <ExternalLink className="w-3 h-3" />
             </a>
           </div>
         </div>
