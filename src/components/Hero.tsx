@@ -88,8 +88,8 @@ function getSmartAIResponse(query: string): string {
   if (q.includes('github') || q.includes('repo') || q.includes('git') || q.includes('code') || q.includes('commits')) {
     return `You can check out my active GitHub profile at **https://github.com/de4d10ck-23** (@de4d10ck-23)! I have **36 public repositories** and **675 contributions in the last year**. My core repositories include **Pixefy SaaS**, **capstone_backend**, **binanceTelegramBot**, **metatrader5TelegramBot**, and **BHMS**!`;
   }
-  if (q.includes('tiktok') || q.includes('youtube') || q.includes('creator')) {
-    return `I grew a community of **60,000+ followers on TikTok** and **21,000+ subscribers on YouTube** through my **3D animations in Blender** and **video edits in CapCut**, earning **₱6,000+ from TikTok Affiliate**! I paused uploading in my 2nd year of college to focus 100% on competitive programming and my BSIT degree.`;
+  if (q.includes('tiktok') || q.includes('youtube') || q.includes('creator') || q.includes('channel')) {
+    return `I grew a community of **60,000+ followers on TikTok** ([@jltteditz](https://www.tiktok.com/@jltteditz)) and **21,000+ subscribers on YouTube** ([@whuttOfficial](https://www.youtube.com/@whuttOfficial)) through my **3D animations in Blender** and **video edits in CapCut**, earning **₱6,000+ from TikTok Affiliate**! I paused uploading in my 2nd year of college to focus 100% on competitive programming and my BSIT degree.`;
   }
   if (q.includes('contact') || q.includes('email') || q.includes('phone') || q.includes('hire')) {
     return `You can reach me directly at **johnlloydttortor@gmail.com** or call/text **0953 987 0591**. I live in **San Vicente, Bontoc, Southern Leyte** and I'm open to software, SaaS, Web-GIS, and IoT/ESP32 projects or developer opportunities!`;
@@ -462,8 +462,24 @@ export const Hero: React.FC = () => {
               <div className="flex items-center gap-3">
                 <Video className="w-3.5 h-3.5 text-rose-500 flex-shrink-0" />
                 <span className="text-[13px] text-gray-500">
-                  Animator &amp; Editor: <strong className="text-gray-700">60K+ TikTok</strong> &amp;{' '}
-                  <strong className="text-gray-700">21K+ YouTube</strong> (Blender · CapCut · Apparel)
+                  Animator &amp; Editor:{' '}
+                  <a
+                    href="https://www.tiktok.com/@jltteditz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-800 font-bold hover:text-rose-600 underline underline-offset-2 transition-colors"
+                  >
+                    60K+ TikTok (@jltteditz)
+                  </a>{' '}
+                  &amp;{' '}
+                  <a
+                    href="https://www.youtube.com/@whuttOfficial"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-800 font-bold hover:text-red-600 underline underline-offset-2 transition-colors"
+                  >
+                    21K+ YouTube (@whuttOfficial)
+                  </a>
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -564,9 +580,25 @@ export const Hero: React.FC = () => {
                 Creator Community
               </p>
               <p className="text-2xl font-extrabold text-gray-900 mt-1">81K+ Total</p>
-              <p className="text-[11px] text-rose-600 font-semibold mt-0.5">
-                60K TikTok · 21K YouTube · Blender &amp; CapCut
-              </p>
+              <div className="text-[11px] text-rose-600 font-semibold mt-0.5 flex items-center justify-center gap-1.5 flex-wrap">
+                <a
+                  href="https://www.tiktok.com/@jltteditz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  60K TikTok
+                </a>
+                <span>·</span>
+                <a
+                  href="https://www.youtube.com/@whuttOfficial"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  21K YouTube
+                </a>
+              </div>
             </div>
           </div>
 

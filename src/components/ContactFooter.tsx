@@ -224,6 +224,22 @@ export const ContactFooter: React.FC = () => {
                 <Github className="w-3.5 h-3.5" />
                 <span>GitHub</span>
               </a>
+              <a
+                href="https://www.tiktok.com/@jltteditz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[12px] font-medium text-rose-400 hover:text-rose-300 transition-colors duration-150 flex items-center gap-1"
+              >
+                <span>TikTok (@jltteditz)</span>
+              </a>
+              <a
+                href="https://www.youtube.com/@whuttOfficial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[12px] font-medium text-red-400 hover:text-red-300 transition-colors duration-150 flex items-center gap-1"
+              >
+                <span>YouTube (@whuttOfficial)</span>
+              </a>
             </div>
           </div>
 
