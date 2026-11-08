@@ -5,7 +5,6 @@ import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Experience } from './components/Experience';
 import { Certificates } from './components/Certificates';
-import { ResumeSection } from './components/ResumeSection';
 import { ContactFooter } from './components/ContactFooter';
 import { ImageLightboxModal } from './components/Modals';
 
@@ -27,7 +26,6 @@ export function App() {
       <Projects onPreviewImage={handlePreviewImage} />
       <Experience />
       <Certificates onPreviewImage={handlePreviewImage} />
-      <ResumeSection />
       <ContactFooter />
 
       <ImageLightboxModal
