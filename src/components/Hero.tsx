@@ -94,7 +94,7 @@ function getSmartAIResponse(query: string): string {
   if (q.includes('contact') || q.includes('email') || q.includes('phone') || q.includes('hire')) {
     return `You can reach me directly at **johnlloydttortor@gmail.com** or call/text **0953 987 0591**. I live in **San Vicente, Bontoc, Southern Leyte** and I'm open to software, SaaS, Web-GIS, and IoT/ESP32 projects or developer opportunities!`;
   }
-  return `Hi! I'm **AI John** — John Lloyd T. Tortor's portfolio assistant. John is a **4th-year BS InfoTech (Programming) student at SLSU**, founder of **Pixefy SaaS (₱9,045+ revenue, 1,088+ users)**, Lead Programmer of **WaterWatch Web-GIS**, **1st Place FCSIT Programming Champion**, **2nd Place EVCO 2024 (C Strand)**, and content creator (**60K+ TikTok, 21K+ YouTube**). Check his GitHub at **@de4d10ck-23** (675 contributions) or ask me anything!`;
+  return `Hi! I'm **Tori** — John Lloyd T. Tortor's portfolio assistant. John is a **4th-year BS InfoTech (Programming) student at SLSU**, founder of **Pixefy SaaS (₱9,045+ revenue, 1,088+ users)**, Lead Programmer of **WaterWatch Web-GIS**, developer of **E-Huwat Transit Radar** and **Smart Trading Grok AI Bot**, **1st Place FCSIT Champion**, and content creator (**60K+ TikTok, 21K+ YouTube**). Check his GitHub at **@de4d10ck-23** or ask me anything!`;
 }
 
 // Generate deterministic 52-week contribution data matching user's real GitHub screenshot (@de4d10ck-23: 675 contributions)
@@ -249,10 +249,10 @@ export const Hero: React.FC = () => {
             <div className="flex items-center gap-3">
               <div className="relative flex-shrink-0">
                 <img
-                  alt="AI JOHN"
-                  src="/images/ai-bot.webp"
+                  alt="Tori"
+                  src="/images/tori-bot.jpg"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = '/images/john-portrait.svg';
+                    (e.target as HTMLImageElement).src = '/images/ai-bot.webp';
                   }}
                   className="h-9 w-9 rounded-xl object-cover ring-1 ring-gray-200 bg-gray-100"
                 />
@@ -263,7 +263,7 @@ export const Hero: React.FC = () => {
               </div>
               <div>
                 <p className="text-[13px] font-bold text-gray-900 leading-none">
-                  Hi, I&apos;m AI JOHN
+                  Hi, I&apos;m Tori
                 </p>
                 <p className="text-[11px] text-green-500 font-medium mt-0.5">
                   Online · Ask me anything about John Lloyd
@@ -298,8 +298,8 @@ export const Hero: React.FC = () => {
                 >
                   {msg.sender !== 'user' && (
                     <img
-                      src="/images/ai-bot.webp"
-                      alt="AI"
+                      src="/images/tori-bot.jpg"
+                      alt="Tori"
                       className="w-7 h-7 mr-2 mt-0.5 rounded-full border border-gray-200 flex-shrink-0 object-cover"
                     />
                   )}
@@ -361,7 +361,7 @@ export const Hero: React.FC = () => {
           >
             <input
               type="text"
-              placeholder="Ask AI John anything (e.g., Pixefy SaaS, E-Huwat Transit Radar, WaterWatch, IoT)..."
+              placeholder="Ask Tori anything (e.g., Pixefy SaaS, Smart Trading, E-Huwat, WaterWatch)..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
               disabled={isSending}
