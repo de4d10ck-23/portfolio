@@ -85,6 +85,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       { label: "Total Revenue", value: "₱9,045+" },
       { label: "Registered Users", value: "1,088+" },
       { label: "Projects Created", value: "279+" },
+      { label: "AI Credits Issued", value: "6,640+" },
     ],
     tech: [
       "React.js",
