@@ -407,9 +407,6 @@ export const Hero: React.FC = () => {
           {/* Left Column */}
           <div className="order-2 lg:order-1 flex flex-col items-center text-center lg:items-start lg:text-left">
             <hr className="mb-6 border-gray-100 w-full lg:hidden" />
-            <p className="text-[11px] font-semibold tracking-[0.1em] uppercase text-gray-400 mb-1">
-              {PERSONAL_INFO.locationBadge}
-            </p>
             <h1 className="text-[30px] sm:text-[36px] font-extrabold text-gray-900 leading-tight tracking-tight mb-1">
               {PERSONAL_INFO.name}
             </h1>
