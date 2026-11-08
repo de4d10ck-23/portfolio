@@ -14,6 +14,12 @@ export const Certificates: React.FC<{ onPreviewImage: (src: string, title: strin
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+  const [activeFilter, setActiveFilter] = useState<'all' | 'competition' | 'coursera'>('all');
+
+  const filteredCerts = CERTIFICATES_DATA.filter((cert) => {
+    if (activeFilter === 'all') return true;
+    return cert.category === activeFilter;
+  });
 
   // Allow user to upload/replace certificate photos right in the browser
   const [customCertImages, setCustomCertImages] = useState<Record<string, string>>(() => {
@@ -38,6 +44,14 @@ export const Certificates: React.FC<{ onPreviewImage: (src: string, title: strin
     if (!emblaApi) return;
     setSelectedIndex(emblaApi.selectedScrollSnap());
   }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    emblaApi.reInit();
+    setScrollSnaps(emblaApi.scrollSnapList());
+    setSelectedIndex(0);
+    emblaApi.scrollTo(0);
+  }, [activeFilter, emblaApi]);
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -105,12 +119,39 @@ export const Certificates: React.FC<{ onPreviewImage: (src: string, title: strin
               Certificates &amp; Awards
             </h2>
             <p className="max-w-xl mx-auto text-[15px] leading-relaxed text-gray-500">
-              From winning <strong>1st Place in the FCSIT Day Programming Skills Competition</strong> and <strong>2nd Place in the 2nd EVCO 2024 (C Language Strand)</strong> to <strong>2nd Place in OS Installation</strong>.
+              From winning <strong>1st Place in FCSIT Coding</strong> and <strong>2nd Place in the 2nd EVCO 2024</strong> to verified professional certifications from <strong>Google, IBM, UC Irvine, and Akamai</strong> on Coursera.
             </p>
             <div className="flex items-center justify-center gap-2 mt-5">
               <div className="w-10 h-0.5 bg-gray-300 rounded-full" />
               <div className="w-2 h-2 rounded-full bg-blue-500" />
               <div className="w-10 h-0.5 bg-gray-300 rounded-full" />
+            </div>
+
+            {/* Category Filter Tabs */}
+            <div className="flex flex-wrap justify-center gap-2 mt-8">
+              {[
+                { id: 'all', label: `All Credentials (${CERTIFICATES_DATA.length})` },
+                {
+                  id: 'competition',
+                  label: `Competitions & Awards (${CERTIFICATES_DATA.filter((c) => c.category === 'competition').length})`,
+                },
+                {
+                  id: 'coursera',
+                  label: `Coursera Certifications (${CERTIFICATES_DATA.filter((c) => c.category === 'coursera').length})`,
+                },
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveFilter(tab.id as any)}
+                  className={`px-4 py-1.5 rounded-full text-[12px] font-semibold transition-all duration-200 border ${
+                    activeFilter === tab.id
+                      ? 'bg-gray-900 text-white border-gray-900 shadow-sm'
+                      : 'bg-white text-gray-600 border-gray-200 hover:border-gray-400 hover:text-gray-900'
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
             </div>
           </div>
         </motion.div>
@@ -123,7 +164,7 @@ export const Certificates: React.FC<{ onPreviewImage: (src: string, title: strin
         >
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex items-center py-4">
-              {CERTIFICATES_DATA.map((cert: CertificateItem, idx: number) => {
+              {filteredCerts.map((cert: CertificateItem, idx: number) => {
                 const isActive = idx === selectedIndex;
                 const displayImg = customCertImages[cert.id] || cert.img;
 
@@ -280,18 +321,9 @@ export const Certificates: React.FC<{ onPreviewImage: (src: string, title: strin
               <ArrowLeft className="w-4 h-4" />
             </button>
             <div className="flex items-center gap-2">
-              {scrollSnaps.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => scrollTo(idx)}
-                  aria-label={`Go to certificate ${idx + 1}`}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    idx === selectedIndex
-                      ? 'w-6 bg-blue-600'
-                      : 'w-1.5 bg-gray-300 hover:bg-gray-400'
-                  }`}
-                />
-              ))}
+              <span className="text-[12px] font-bold text-gray-700 bg-white border border-gray-200 px-3 py-1 rounded-full shadow-sm">
+                {selectedIndex + 1} / {filteredCerts.length}
+              </span>
             </div>
             <button
               onClick={scrollNext}

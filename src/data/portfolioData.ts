@@ -21,6 +21,7 @@ export interface CertificateItem {
   img: string;
   links: { label: string; url: string }[];
   accentColor: string;
+  category?: 'competition' | 'coursera';
 }
 
 export interface ExperienceItem {
@@ -177,6 +178,7 @@ export const CERTIFICATES_DATA: CertificateItem[] = [
     img: "/certificates/cert-fcsit-1st-place-2025.jpg",
     links: [],
     accentColor: "from-amber-500 to-yellow-600",
+    category: "competition",
   },
   {
     id: "evco-2024",
@@ -193,6 +195,7 @@ export const CERTIFICATES_DATA: CertificateItem[] = [
       },
     ],
     accentColor: "from-blue-600 to-indigo-700",
+    category: "competition",
   },
   {
     id: "os-install-2nd",
@@ -204,6 +207,7 @@ export const CERTIFICATES_DATA: CertificateItem[] = [
     img: "/certificates/cert-os-installation-2023.jpg",
     links: [],
     accentColor: "from-purple-600 to-indigo-700",
+    category: "competition",
   },
   {
     id: "fcsit-participation-2025",
@@ -215,6 +219,194 @@ export const CERTIFICATES_DATA: CertificateItem[] = [
     img: "/certificates/cert-fcsit-participation-2025.jpg",
     links: [],
     accentColor: "from-indigo-600 to-blue-700",
+    category: "competition",
+  },
+  {
+    id: "coursera-google-ai-essentials",
+    yearTag: "April 19, 2026 · Specialization",
+    placement: "🌟 Google Specialization",
+    title: "Google AI Essentials Specialization (5 Courses)",
+    issuer: "Google Career Certificates · Amanda Brophy",
+    desc: "Successfully completed the online 5-course Google AI Essentials specialization, mastering foundational artificial intelligence concepts, prompt engineering, generative AI productivity workflows, and responsible AI implementation.",
+    img: "/certificates/coursera-7xaabv75s0bg.jpg",
+    links: [
+      {
+        label: "Verify on Coursera",
+        url: "https://coursera.org/verify/specialization/7XAABV75S0BG",
+      },
+    ],
+    accentColor: "from-blue-600 to-emerald-600",
+    category: "coursera",
+  },
+  {
+    id: "coursera-arduino-c",
+    yearTag: "March 28, 2026",
+    placement: "🎓 UC Irvine (UCI)",
+    title: "The Arduino Platform and C Programming",
+    issuer: "University of California, Irvine · Prof. Ian Harris",
+    desc: "Completed university-level coursework on the Arduino architecture, C/C++ embedded systems programming, microcontroller hardware debugging, and sensor actuation.",
+    img: "/certificates/the-arduino-platform-and-c-programming.jpg",
+    links: [
+      {
+        label: "Verify on Coursera",
+        url: "https://coursera.org/verify/99NWK4A7P7CJ",
+      },
+    ],
+    accentColor: "from-teal-600 to-cyan-700",
+    category: "coursera",
+  },
+  {
+    id: "coursera-ibm-web-dev",
+    yearTag: "March 28, 2026",
+    placement: "⚡ IBM Certified",
+    title: "Introduction to Web Development with HTML, CSS, JavaScript",
+    issuer: "IBM · Skills Network",
+    desc: "Completed IBM certification covering modern semantic HTML5, CSS responsive layout architectures, JavaScript programming, DOM manipulation, and web deployment fundamentals.",
+    img: "/certificates/introduction-to-web-development-with-html-css.jpg",
+    links: [
+      {
+        label: "Verify on Coursera",
+        url: "https://coursera.org/verify/AU5M29RU9TZ1",
+      },
+    ],
+    accentColor: "from-blue-700 to-indigo-800",
+    category: "coursera",
+  },
+  {
+    id: "coursera-ibm-data-analytics",
+    yearTag: "April 17, 2026",
+    placement: "📊 IBM Certified",
+    title: "Data Analytics Foundations: Turn Data into Insights",
+    issuer: "IBM · Rav Ahuja (Global Program Director)",
+    desc: "Completed foundational data analytics coursework covering modern data pipelines, data transformation workflows, insight extraction, and structured business reporting.",
+    img: "/certificates/data-analytics-foundations.jpg",
+    links: [
+      {
+        label: "Verify on Coursera",
+        url: "https://coursera.org/verify/KNIZEJWTK8KB",
+      },
+    ],
+    accentColor: "from-sky-600 to-blue-800",
+    category: "coursera",
+  },
+  {
+    id: "coursera-akamai-it-security",
+    yearTag: "April 21, 2026",
+    placement: "🛡️ Akamai Technologies",
+    title: "Introduction to IT Security",
+    issuer: "Akamai Technologies, Inc. · Akamai Technical Academy",
+    desc: "Completed IT security certification covering threat identification, defense mechanisms, access control architecture, cryptography, and secure systems deployment.",
+    img: "/certificates/coursera-cknran69bl5l.jpg",
+    links: [
+      {
+        label: "Verify on Coursera",
+        url: "https://coursera.org/verify/CKNRAN69BL5L",
+      },
+    ],
+    accentColor: "from-amber-600 to-orange-700",
+    category: "coursera",
+  },
+  {
+    id: "coursera-uw-web-project",
+    yearTag: "May 4, 2026",
+    placement: "🌐 Univ. of Washington",
+    title: "Guided Website Development Project",
+    issuer: "University of Washington · Coursera MOOC",
+    desc: "Completed guided hands-on web development project building and deploying responsive website architectures with cross-device compatibility.",
+    img: "/certificates/guided-website-development-project.jpg",
+    links: [
+      {
+        label: "Verify on Coursera",
+        url: "https://coursera.org/verify/DJGW3W32Z2RE",
+      },
+    ],
+    accentColor: "from-purple-700 to-indigo-800",
+    category: "coursera",
+  },
+  {
+    id: "coursera-google-prompting",
+    yearTag: "April 18, 2026",
+    placement: "🤖 Google Certified",
+    title: "Discover the Art of Prompting",
+    issuer: "Google Career Certificates",
+    desc: "Certified by Google in prompt engineering techniques, contextual steering, structured output generation, and creative prompting with large language models.",
+    img: "/certificates/discover-the-art-of-prompting.jpg",
+    links: [
+      {
+        label: "Verify on Coursera",
+        url: "https://coursera.org/verify/2AGBX7GFUJL7",
+      },
+    ],
+    accentColor: "from-blue-600 to-violet-700",
+    category: "coursera",
+  },
+  {
+    id: "coursera-google-productivity-ai",
+    yearTag: "April 18, 2026",
+    placement: "🚀 Google Certified",
+    title: "Maximize Productivity With AI Tools",
+    issuer: "Google Career Certificates",
+    desc: "Certified by Google in deploying generative AI assistants to streamline developer workflows, automate documentation, and optimize productivity.",
+    img: "/certificates/maximize-productivity-with-ai-tools.jpg",
+    links: [
+      {
+        label: "Verify on Coursera",
+        url: "https://coursera.org/verify/34FZOOY1E7UG",
+      },
+    ],
+    accentColor: "from-emerald-600 to-teal-700",
+    category: "coursera",
+  },
+  {
+    id: "coursera-google-ai-curve",
+    yearTag: "April 19, 2026",
+    placement: "🔮 Google Certified",
+    title: "Stay Ahead of the AI Curve",
+    issuer: "Google Career Certificates",
+    desc: "Certified by Google in emerging AI paradigms, multimodal tools, generative modeling trends, and future-ready software engineering strategies.",
+    img: "/certificates/stay-ahead-of-the-ai-curve.jpg",
+    links: [
+      {
+        label: "Verify on Coursera",
+        url: "https://coursera.org/verify/GJRILIB6O160",
+      },
+    ],
+    accentColor: "from-indigo-600 to-purple-700",
+    category: "coursera",
+  },
+  {
+    id: "coursera-google-responsible-ai",
+    yearTag: "April 18, 2026",
+    placement: "⚖️ Google Certified",
+    title: "Use AI Responsibly",
+    issuer: "Google Career Certificates",
+    desc: "Certified by Google in ethical AI engineering, data privacy protection, algorithmic bias mitigation, and responsible generative AI deployment.",
+    img: "/certificates/use-ai-responsibly.jpg",
+    links: [
+      {
+        label: "Verify on Coursera",
+        url: "https://coursera.org/verify/6BWE3AO10MBB",
+      },
+    ],
+    accentColor: "from-rose-600 to-pink-700",
+    category: "coursera",
+  },
+  {
+    id: "coursera-google-intro-ai",
+    yearTag: "April 16, 2026",
+    placement: "💡 Google Certified",
+    title: "Introduction to AI",
+    issuer: "Google Career Certificates",
+    desc: "Completed foundational artificial intelligence certification covering neural network fundamentals, machine learning models, and real-world AI applications.",
+    img: "/certificates/coursera-kpyykwk5yspc.jpg",
+    links: [
+      {
+        label: "Verify on Coursera",
+        url: "https://coursera.org/verify/KPYYKWK5YSPC",
+      },
+    ],
+    accentColor: "from-blue-500 to-cyan-600",
+    category: "coursera",
   },
 ];
 
