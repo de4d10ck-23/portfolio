@@ -14,12 +14,6 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
-  const [activeFilter, setActiveFilter] = useState<'all' | 'ongoing' | 'completed'>('all');
-
-  const filteredProjects = PROJECTS_DATA.filter((p) => {
-    if (activeFilter === 'all') return true;
-    return p.status === activeFilter;
-  });
 
   const scrollTo = useCallback(
     (index: number) => emblaApi && emblaApi.scrollTo(index),
@@ -32,14 +26,6 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
     if (!emblaApi) return;
     setSelectedIndex(emblaApi.selectedScrollSnap());
   }, [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    emblaApi.reInit();
-    setScrollSnaps(emblaApi.scrollSnapList());
-    setSelectedIndex(0);
-    emblaApi.scrollTo(0);
-  }, [activeFilter, emblaApi]);
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -82,33 +68,6 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
               <div className="w-2 h-2 rounded-full bg-blue-500" />
               <div className="w-10 h-0.5 bg-gray-300 rounded-full" />
             </div>
-
-            {/* Project Filter Tabs */}
-            <div className="flex flex-wrap justify-center gap-2 mt-6">
-              {[
-                { id: 'all', label: `All Projects (${PROJECTS_DATA.length})` },
-                {
-                  id: 'ongoing',
-                  label: `Ongoing Projects (${PROJECTS_DATA.filter((p) => p.status === 'ongoing').length})`,
-                },
-                {
-                  id: 'completed',
-                  label: `Completed & Shipped (${PROJECTS_DATA.filter((p) => p.status === 'completed').length})`,
-                },
-              ].map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveFilter(tab.id as any)}
-                  className={`px-4 py-1.5 rounded-full text-[12px] font-bold transition-all ${
-                    activeFilter === tab.id
-                      ? 'bg-gray-900 text-white shadow-sm'
-                      : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-100 hover:text-gray-900'
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
           </div>
         </motion.div>
 
@@ -120,7 +79,7 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
         >
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex items-center py-4">
-              {filteredProjects.map((proj: ProjectItem, idx: number) => {
+              {PROJECTS_DATA.map((proj: ProjectItem, idx: number) => {
                 const isActive = idx === selectedIndex;
                 return (
                   <div

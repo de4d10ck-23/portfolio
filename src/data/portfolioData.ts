@@ -98,7 +98,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
   },
   {
     id: "ehuwat",
-    img: "/projects/ehuwat-preview.svg",
+    img: "/projects/ehuwat-app.jpg",
     badge: "Ongoing Project · Live Transit Radar & PWA",
     title: "E-HUWAT — LIVE TRANSIT RADAR",
     subtitle: "Community Transit Radar & GPS Hailing for Southern Leyte",
