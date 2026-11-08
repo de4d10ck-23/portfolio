@@ -9,6 +9,7 @@ import {
   Trophy,
 } from 'lucide-react';
 import { SKILLS_LIST } from '../data/portfolioData';
+import { renderTechLogo } from './TechLogos';
 
 const SKILL_CARDS = [
   {
@@ -90,8 +91,8 @@ export const Skills: React.FC = () => {
               transition={{ duration: 0.35, delay: 0.03 * idx }}
             >
               <div className="group flex flex-col items-center gap-2.5 p-4 rounded-2xl bg-gray-50 border border-gray-100 hover:bg-white hover:border-blue-100 hover:shadow-md transition-all duration-300 cursor-default">
-                <div className="h-10 w-10 flex items-center justify-center rounded-xl bg-white shadow-sm border border-gray-100 group-hover:scale-110 group-hover:border-blue-200 transition-all duration-300 text-[12px] font-extrabold text-gray-800 group-hover:text-blue-600">
-                  {skill.badge}
+                <div className="h-10 w-10 flex items-center justify-center rounded-xl bg-white shadow-sm border border-gray-100 group-hover:scale-110 group-hover:border-blue-200 transition-all duration-300">
+                  {renderTechLogo(skill.name, 'w-6 h-6')}
                 </div>
                 <p className="text-[11px] font-semibold text-gray-700 text-center leading-tight">
                   {skill.name}
