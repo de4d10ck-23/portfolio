@@ -241,10 +241,9 @@ export const Hero: React.FC = () => {
   };
 
   const quickPrompts = [
-    'Tell me about Pixefy SaaS',
-    'Where is your GitHub & code?',
     'What competitions did you win?',
     'Tell me about WaterWatch & IoT',
+    'How can I contact you?',
   ];
 
   return (
