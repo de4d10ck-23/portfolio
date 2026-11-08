@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0a2540"/>
+      <stop offset="55%" stop-color="#0f3b82"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <!-- Subtle GIS Map Grid & Contours -->
+  <g stroke="#38bdf8" stroke-opacity="0.15" stroke-width="1">
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="480" x2="1200" y2="480"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="200" y1="0" x2="200" y2="760"/>
+    <line x1="400" y1="0" x2="400" y2="760"/>
+    <line x1="600" y1="0" x2="600" y2="760"/>
+    <line x1="800" y1="0" x2="800" y2="760"/>
+    <line x1="1000" y1="0" x2="1000" y2="760"/>
+  </g>
+  <path d="M80 520 Q280 390 480 450 T890 340 T1150 410" stroke="#38bdf8" stroke-opacity="0.35" stroke-width="3" fill="none" stroke-dasharray="8 8"/>
+  <path d="M120 620 Q360 490 610 530 T1050 420" stroke="#22d3ee" stroke-opacity="0.25" stroke-width="2" fill="none"/>
+
+  <!-- Top Browser Bar -->
+  <rect x="60" y="48" width="1080" height="664" rx="20" fill="#0f172a" fill-opacity="0.78" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5"/>
+  <rect x="60" y="48" width="1080" height="48" rx="20" fill="#1e293b"/>
+  <circle cx="92" cy="72" r="7" fill="#ef4444"/>
+  <circle cx="114" cy="72" r="7" fill="#f59e0b"/>
+  <circle cx="136" cy="72" r="7" fill="#10b981"/>
+  <rect x="360" y="58" width="480" height="28" rx="8" fill="#0f172a"/>
+  <text x="600" y="77" fill="#94a3b8" font-family="Inter, sans-serif" font-size="13" font-weight="600" text-anchor="middle">https://waterwatch.tortor.org — Maasin City Web-GIS</text>
+
+  <!-- Left GIS Map Panel -->
+  <rect x="88" y="120" width="640" height="560" rx="16" fill="#0c192c" stroke="#1e3a5f"/>
+  <!-- Simulated Coastline / Watershed Polygon -->
+  <path d="M130 220 L290 175 L470 210 L640 160 L690 340 L590 490 L380 540 L180 470 Z" fill="#0284c7" fill-opacity="0.18" stroke="#38bdf8" stroke-width="2"/>
+  <!-- GIS Sensor Pins -->
+  <g transform="translate(270, 260)">
+    <circle cx="0" cy="0" r="24" fill="#10b981" fill-opacity="0.25"/>
+    <circle cx="0" cy="0" r="10" fill="#10b981" stroke="#ffffff" stroke-width="2.5"/>
+    <rect x="-65" y="-44" width="130" height="26" rx="6" fill="#0f172a" stroke="#10b981"/>
+    <text x="0" y="-27" fill="#ecfdf5" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Station A · pH 7.4 (Safe)</text>
+  </g>
+  <g transform="translate(480, 330)">
+    <circle cx="0" cy="0" r="28" fill="#38bdf8" fill-opacity="0.25"/>
+    <circle cx="0" cy="0" r="10" fill="#38bdf8" stroke="#ffffff" stroke-width="2.5"/>
+    <rect x="-75" y="-44" width="150" height="26" rx="6" fill="#0f172a" stroke="#38bdf8"/>
+    <text x="0" y="-27" fill="#e0f2fe" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Station B · Turbidity 1.2 NTU</text>
+  </g>
+  <g transform="translate(360, 440)">
+    <circle cx="0" cy="0" r="22" fill="#f59e0b" fill-opacity="0.25"/>
+    <circle cx="0" cy="0" r="10" fill="#f59e0b" stroke="#ffffff" stroke-width="2.5"/>
+    <rect x="-70" y="-44" width="140" height="26" rx="6" fill="#0f172a" stroke="#f59e0b"/>
+    <text x="0" y="-27" fill="#fef3c7" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Station C · Forecast Alert</text>
+  </g>
+
+  <!-- Map Overlay Title -->
+  <rect x="112" y="144" width="290" height="64" rx="12" fill="#0f172a" fill-opacity="0.9" stroke="#334155"/>
+  <text x="132" y="172" fill="#38bdf8" font-family="Inter, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5">WATERWATCH WEB-GIS</text>
+  <text x="132" y="194" fill="#f8fafc" font-family="Inter, sans-serif" font-size="15" font-weight="700">Maasin City Water Sources</text>
+
+  <!-- Right Forecasting & Telemetry Panel -->
+  <rect x="752" y="120" width="360" height="268" rx="16" fill="#0f172a" stroke="#1e293b"/>
+  <text x="778" y="156" fill="#94a3b8" font-family="Inter, sans-serif" font-size="11" font-weight="700" letter-spacing="1.2">QUALITY FORECASTING ENGINE</text>
+  <text x="778" y="184" fill="#ffffff" font-family="Inter, sans-serif" font-size="20" font-weight="800">7-Day WQI Prediction</text>
+  <text x="778" y="210" fill="#10b981" font-family="Inter, sans-serif" font-size="13" font-weight="700">● 96.4% Potability Index · Optimal</text>
+  <!-- Forecast Chart -->
+  <polyline points="780,330 825,310 870,318 915,285 960,270 1005,248 1050,235 1085,220" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round"/>
+  <polyline points="780,330 825,310 870,318 915,285 960,270 1005,248 1050,235 1085,220 1085,355 780,355" fill="#38bdf8" fill-opacity="0.12"/>
+
+  <!-- Bottom Right KPI Cards -->
+  <rect x="752" y="408" width="360" height="272" rx="16" fill="#0f172a" stroke="#1e293b"/>
+  <text x="778" y="444" fill="#94a3b8" font-family="Inter, sans-serif" font-size="11" font-weight="700" letter-spacing="1.2">REAL-TIME SENSOR PARAMETERS</text>
+  <rect x="778" y="464" width="148" height="84" rx="12" fill="#1e293b"/>
+  <text x="796" y="492" fill="#94a3b8" font-family="Inter, sans-serif" font-size="12">Dissolved O₂</text>
+  <text x="796" y="526" fill="#38bdf8" font-family="Inter, sans-serif" font-size="24" font-weight="800">8.4 mg/L</text>
+
+  <rect x="940" y="464" width="148" height="84" rx="12" fill="#1e293b"/>
+  <text x="958" y="492" fill="#94a3b8" font-family="Inter, sans-serif" font-size="12">Water Temp</text>
+  <text x="958" y="526" fill="#10b981" font-family="Inter, sans-serif" font-size="24" font-weight="800">24.8 °C</text>
+
+  <rect x="778" y="564" width="310" height="90" rx="12" fill="#1e293b"/>
+  <text x="798" y="596" fill="#f8fafc" font-family="Inter, sans-serif" font-size="14" font-weight="700">4th Year BSIT Capstone Project</text>
+  <text x="798" y="620" fill="#38bdf8" font-family="Inter, sans-serif" font-size="13" font-weight="600">Lead Programmer: John Lloyd T. Tortor</text>
+  <text x="798" y="640" fill="#94a3b8" font-family="Inter, sans-serif" font-size="12">Live PWA · waterwatch.tortor.org</text>
+</svg>
+

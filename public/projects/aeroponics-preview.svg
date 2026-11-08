@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" fill="none">
+  <defs>
+    <linearGradient id="aeroBg" x1="0" y1="0" x2="1200" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="50%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#aeroBg)"/>
+  <!-- Subtle Circuit Lines -->
+  <g stroke="#34d399" stroke-opacity="0.16" stroke-width="2">
+    <path d="M100 120 H340 L400 180 H650"/>
+    <path d="M150 640 H420 L480 580 H820"/>
+    <circle cx="100" cy="120" r="5" fill="#34d399"/>
+    <circle cx="650" cy="180" r="5" fill="#34d399"/>
+  </g>
+
+  <!-- Left Hardware Card (ESP32 + Relays) -->
+  <rect x="80" y="90" width="540" height="580" rx="24" fill="#0f172a" fill-opacity="0.9" stroke="#10b981" stroke-opacity="0.4" stroke-width="2"/>
+  <text x="120" y="145" fill="#34d399" font-family="Inter, sans-serif" font-size="12" font-weight="800" letter-spacing="2">IOT HARDWARE CONTROLLER</text>
+  <text x="120" y="182" fill="#ffffff" font-family="Inter, sans-serif" font-size="28" font-weight="800">ESP32 Smart Aeroponics</text>
+  <text x="120" y="212" fill="#94a3b8" font-family="Inter, sans-serif" font-size="14">Automated Misting · Nutrient Timers · Wi-Fi Control</text>
+
+  <!-- ESP32 Board Illustration -->
+  <rect x="120" y="248" width="460" height="220" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <rect x="155" y="280" width="160" height="150" rx="10" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
+  <text x="235" y="345" fill="#10b981" font-family="monospace" font-size="18" font-weight="700" text-anchor="middle">ESP32-WROOM</text>
+  <text x="235" y="370" fill="#64748b" font-family="monospace" font-size="12" text-anchor="middle">2.4GHz Wi-Fi + BLE</text>
+  <!-- GPIO Pins & Relay Status -->
+  <rect x="345" y="280" width="205" height="44" rx="8" fill="#064e3b" stroke="#10b981"/>
+  <text x="365" y="307" fill="#ecfdf5" font-family="Inter, sans-serif" font-size="13" font-weight="700">● Mist Pump Relay: ON</text>
+  <rect x="345" y="335" width="205" height="44" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="365" y="362" fill="#38bdf8" font-family="Inter, sans-serif" font-size="13" font-weight="700">● Nutrient Valve: AUTO</text>
+  <rect x="345" y="390" width="205" height="44" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="365" y="417" fill="#fbbf24" font-family="Inter, sans-serif" font-size="13" font-weight="700">● RTC Timer Sync: OK</text>
+
+  <!-- Bottom Hardware Specs -->
+  <rect x="120" y="495" width="220" height="130" rx="14" fill="#1e293b"/>
+  <text x="144" y="530" fill="#94a3b8" font-family="Inter, sans-serif" font-size="12" font-weight="600">SPRAY INTERVAL</text>
+  <text x="144" y="572" fill="#34d399" font-family="Inter, sans-serif" font-size="30" font-weight="800">Every 15m</text>
+  <text x="144" y="602" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="12">Duration: 45 sec mist</text>
+
+  <rect x="360" y="495" width="220" height="130" rx="14" fill="#1e293b"/>
+  <text x="384" y="530" fill="#94a3b8" font-family="Inter, sans-serif" font-size="12" font-weight="600">ROOT CHAMBER RH</text>
+  <text x="384" y="572" fill="#38bdf8" font-family="Inter, sans-serif" font-size="30" font-weight="800">94.2% RH</text>
+  <text x="384" y="602" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="12">Temp: 23.5 °C Optimal</text>
+
+  <!-- Right Mobile Phone Controller Mockup -->
+  <rect x="690" y="70" width="390" height="620" rx="44" fill="#0f172a" stroke="#475569" stroke-width="6"/>
+  <rect x="825" y="90" width="120" height="22" rx="11" fill="#1e293b"/>
+  <rect x="714" y="130" width="342" height="532" rx="28" fill="#111827"/>
+
+  <text x="744" y="175" fill="#10b981" font-family="Inter, sans-serif" font-size="11" font-weight="800" letter-spacing="1.5">MOBILE CONTROLLER APP</text>
+  <text x="744" y="202" fill="#ffffff" font-family="Inter, sans-serif" font-size="20" font-weight="800">Aeroponics Timer UI</text>
+
+  <rect x="740" y="226" width="290" height="105" rx="16" fill="#064e3b"/>
+  <text x="764" y="258" fill="#a7f3d0" font-family="Inter, sans-serif" font-size="12" font-weight="700">ACTIVE SCHEDULE</text>
+  <text x="764" y="290" fill="#ffffff" font-family="Inter, sans-serif" font-size="22" font-weight="800">06:00 AM – 06:00 PM</text>
+  <text x="764" y="314" fill="#6ee7b7" font-family="Inter, sans-serif" font-size="12">Cycle: 30s ON / 12m OFF</text>
+
+  <rect x="740" y="348" width="290" height="140" rx="16" fill="#1f2937"/>
+  <text x="764" y="382" fill="#e5e7eb" font-family="Inter, sans-serif" font-size="14" font-weight="700">Set Custom Mist Timer</text>
+  <rect x="764" y="400" width="115" height="64" rx="10" fill="#111827" stroke="#10b981"/>
+  <text x="821" y="426" fill="#9ca3af" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">MIST DURATION</text>
+  <text x="821" y="450" fill="#10b981" font-family="Inter, sans-serif" font-size="18" font-weight="800" text-anchor="middle">45 sec</text>
+
+  <rect x="891" y="400" width="115" height="64" rx="10" fill="#111827" stroke="#38bdf8"/>
+  <text x="948" y="426" fill="#9ca3af" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">INTERVAL</text>
+  <text x="948" y="450" fill="#38bdf8" font-family="Inter, sans-serif" font-size="18" font-weight="800" text-anchor="middle">15 min</text>
+
+  <rect x="740" y="510" width="290" height="54" rx="14" fill="#10b981"/>
+  <text x="885" y="543" fill="#064e3b" font-family="Inter, sans-serif" font-size="15" font-weight="800" text-anchor="middle">Trigger Manual Mist Now</text>
+
+  <text x="885" y="610" fill="#9ca3af" font-family="Inter, sans-serif" font-size="12" text-anchor="middle">Connected to ESP32 (192.168.4.1)</text>
+</svg>
+

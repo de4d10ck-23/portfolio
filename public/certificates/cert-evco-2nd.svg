@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 720" fill="none">
+  <rect width="1080" height="720" fill="#eff6ff"/>
+  <rect x="28" y="28" width="1024" height="664" rx="16" fill="#ffffff" stroke="#2563eb" stroke-width="4"/>
+  <rect x="44" y="44" width="992" height="632" rx="10" fill="none" stroke="#bfdbfe" stroke-width="2" stroke-dasharray="8 6"/>
+
+  <circle cx="540" cy="135" r="46" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="540" y="152" font-family="Inter, sans-serif" font-size="42" text-anchor="middle">🥈</text>
+
+  <text x="540" y="218" fill="#1d4ed8" font-family="Inter, sans-serif" font-size="14" font-weight="800" letter-spacing="3" text-anchor="middle">2ND EASTERN VISAYAS CODING OLYMPICS (EVCO 2024)</text>
+  <text x="540" y="268" fill="#111827" font-family="Inter, sans-serif" font-size="38" font-weight="900" letter-spacing="1" text-anchor="middle">CERTIFICATE &amp; TROPHY OF EXCELLENCE</text>
+  <text x="540" y="305" fill="#6b7280" font-family="Inter, sans-serif" font-size="15" font-weight="500" text-anchor="middle">Proudly awarded to SLSU Representative</text>
+
+  <text x="540" y="368" fill="#111827" font-family="Inter, sans-serif" font-size="44" font-weight="900" text-anchor="middle">JOHN LLOYD T. TORTOR</text>
+  <line x1="290" y1="388" x2="790" y2="388" stroke="#2563eb" stroke-width="2.5"/>
+
+  <rect x="330" y="414" width="420" height="44" rx="22" fill="#2563eb"/>
+  <text x="540" y="442" fill="#ffffff" font-family="Inter, sans-serif" font-size="18" font-weight="800" letter-spacing="1.5" text-anchor="middle">2ND PLACE — C LANGUAGE STRAND</text>
+
+  <text x="540" y="502" fill="#374151" font-family="Inter, sans-serif" font-size="22" font-weight="800" text-anchor="middle">2nd EVCO 2024 Regional Programming Competition</text>
+  <text x="540" y="534" fill="#6b7280" font-family="Inter, sans-serif" font-size="15" text-anchor="middle">Representing Southern Leyte State University (SLSU) · Trophy &amp; Medal Winner</text>
+
+  <line x1="220" y1="610" x2="420" y2="610" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="320" y="632" fill="#4b5563" font-family="Inter, sans-serif" font-size="13" font-weight="700" text-anchor="middle">EVCO 2024 Regional Board</text>
+
+  <line x1="660" y1="610" x2="860" y2="610" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="760" y="632" fill="#4b5563" font-family="Inter, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Southern Leyte State University</text>
+</svg>
+
