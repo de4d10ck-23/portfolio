@@ -570,15 +570,9 @@ export const Hero: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-2.5 mt-5">
               <a
                 href="#projects"
-                className="px-4 py-2 bg-gray-900 hover:bg-gray-700 text-white text-[12px] font-bold rounded-lg transition-colors shadow-sm"
+                className="px-5 py-2.5 bg-gray-900 hover:bg-gray-700 text-white text-[12px] font-bold rounded-xl transition-all shadow-sm hover:shadow"
               >
                 View My Work
-              </a>
-              <a
-                href="#contact"
-                className="px-4 py-2 bg-white hover:bg-gray-50 text-gray-800 text-[12px] font-bold rounded-lg border border-gray-200 transition-colors"
-              >
-                Contact Me
               </a>
             </div>
           </div>
