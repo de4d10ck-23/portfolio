@@ -219,8 +219,8 @@ export const Certificates: React.FC<{ onPreviewImage: (src: string, title: strin
                         <div className="px-5 pb-5 flex flex-wrap items-center justify-between gap-2">
                           <button
                             type="button"
-                            onClick={() => onPreviewImage(displayImg, cert.title)}
-                            className="flex items-center gap-1.5 text-[11px] font-semibold text-blue-600 hover:text-blue-700 transition-colors tracking-wide uppercase"
+                            onClick={() => onPreviewImage(cert.img, cert.title)}
+                            className="flex items-center gap-1.5 text-[11px] font-semibold text-blue-600 hover:text-blue-700 transition-colors tracking-wide uppercase cursor-pointer"
                           >
                             <span>View Certificate</span>
                             <ArrowUpRight className="w-3 h-3" />

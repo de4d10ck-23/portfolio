@@ -208,7 +208,7 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
                       </div>
 
                       {isActive && (
-                        <div className="px-6 pb-6 flex items-center justify-between gap-4">
+                        <div className="px-6 pb-6 flex items-center justify-start">
                           <a
                             href={proj.site}
                             target={proj.site.startsWith('http') ? '_blank' : undefined}
@@ -222,13 +222,6 @@ export const Projects: React.FC<{ onPreviewImage: (src: string, title: string) =
                             </span>
                             <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                           </a>
-                          <button
-                            type="button"
-                            onClick={() => onPreviewImage(proj.img, proj.title)}
-                            className="text-[11px] font-semibold text-gray-500 hover:text-gray-900 underline underline-offset-4"
-                          >
-                            Preview Dashboard / UI
-                          </button>
                         </div>
                       )}
                     </div>
