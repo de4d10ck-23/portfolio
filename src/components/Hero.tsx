@@ -86,7 +86,7 @@ function getSmartAIResponse(query: string): string {
     return `Some of my favorite IoT & embedded hardware builds include:\n• **Smart ESP32 Aeroponics System:** Controlled via smartphone to set misting timers and schedules.\n• **Phone-Controlled Mini RC Robot:** A commissioned student project I built in 3rd year that calculates real-time distance traveled using calibrated Servo Motors.`;
   }
   if (q.includes('github') || q.includes('repo') || q.includes('git') || q.includes('code') || q.includes('commits')) {
-    return `You can check out my active GitHub profile at **https://github.com/de4d10ck-23** (@de4d10ck-23)! I have **36 public repositories** and **675 contributions in the last year**. My core repositories include **Pixefy SaaS**, **capstone_backend**, **binanceTelegramBot**, **metatrader5TelegramBot**, and **BHMS**!`;
+    return `You can check out my active GitHub profile at **https://github.com/de4d10ck-23** (@de4d10ck-23)! I have **36 public repositories** and **712 contributions in the last year**. My core repositories include **Pixefy SaaS**, **capstone_backend**, **binanceTelegramBot**, **metatrader5TelegramBot**, and **BHMS**!`;
   }
   if (q.includes('tiktok') || q.includes('youtube') || q.includes('creator') || q.includes('channel')) {
     return `I grew a community of **60,000+ followers on TikTok** ([@jltteditz](https://www.tiktok.com/@jltteditz)) and **21,000+ subscribers on YouTube** ([@whuttOfficial](https://www.youtube.com/@whuttOfficial)) through my **3D animations in Blender** and **video edits in CapCut**, earning **₱6,000+ from TikTok Affiliate**! I paused uploading in my 2nd year of college to focus 100% on competitive programming and my BSIT degree.`;
@@ -97,24 +97,62 @@ function getSmartAIResponse(query: string): string {
   return `Hi! I'm **Tori** — John Lloyd T. Tortor's portfolio assistant. John is a **4th-year BS InfoTech (Programming) student at SLSU**, founder of **Pixefy SaaS (₱9,045+ revenue, 1,088+ users)**, Lead Programmer of **WaterWatch Web-GIS**, developer of **E-Huwat Transit Radar** and **Smart Trading Grok AI Bot**, **1st Place FCSIT Champion**, and content creator (**60K+ TikTok, 21K+ YouTube**). Check his GitHub at **@de4d10ck-23** or ask me anything!`;
 }
 
-// Generate deterministic 52-week contribution data matching user's real GitHub screenshot (@de4d10ck-23: 675 contributions)
-const CONTRIBUTION_WEEKS = Array.from({ length: 52 }, (_, w) =>
-  Array.from({ length: 7 }, (_, d) => {
-    // Weeks 0-33: Nov 2025 to June 2026 - light academic period
-    if (w < 34) {
-      const seed = (w * 11 + d * 7 + 3) % 23;
-      if (seed === 0 && d % 2 === 0) return 2;
-      if (seed <= 2) return 1;
-      return 0;
-    }
-    // Weeks 34-51: July to November 2026 - intensive development (Pixefy summer launch, Capstone backend, bots)
-    const seed = (w * 13 + d * 17 + 5) % 19;
-    if (seed % 4 === 0) return 4;
-    if (seed % 3 === 0) return 3;
-    if (seed % 2 === 0) return 2;
-    return 1;
-  })
-);
+// Exact 53-week contribution matrix extracted from user's live GitHub profile (@de4d10ck-23: 712 contributions)
+const CONTRIBUTION_WEEKS: number[][] = [
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 1],
+  [0, 0, 2, 0, 0, 0, 0],
+  [0, 0, 0, 1, 1, 1, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 1, 1],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 1, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 1, 0, 0],
+  [0, 0, 0, 0, 1, 0, 0],
+  [1, 0, 0, 0, 0, 1, 0],
+  [0, 1, 1, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 3, 4, 3, 1, 0],
+  [2, 1, 1, 1, 1, 1, 1],
+  [0, 1, 1, 1, 1, 1, 3],
+  [1, 1, 3, 4, 4, 1, 1],
+  [1, 4, 2, 2, 1, 1, 1],
+  [1, 1, 0, 1, 2, 1, 1],
+  [1, 1, 1, 1, 0, 0, 0],
+  [1, 0, 0, 0, 3, 3, 1],
+  [0, 1, 1, 0, 0, 1, 1],
+  [1, 0, 0, 0, 0, 0, 0],
+  [0, 0, 1, 0, 1, 0, 1],
+  [0, 0, 0, 0, 0, 1, 0],
+  [0, 0, 0, 0, 1, 0, 1],
+  [0, 0, 1, 0, 0, 0, 1],
+  [1, 1, 1, 0, 0, 0, 0],
+  [0, 0, 0, 0, 1, 1, 0],
+  [0, 0, 0, 0, 1, 0, 2],
+  [1, 0, 1, 1, 1, 1, 1],
+  [0, 1, 0, 1, 1, 1, 1],
+  [4, 0, 0, 0, 0, 0, 0],
+];
 
 const LEVEL_COLORS = [
   '#ebedf0', // level 0
@@ -647,7 +685,7 @@ export const Hero: React.FC = () => {
                   <div className="flex items-center gap-2">
                     <Code className="w-4 h-4 text-blue-600" />
                     <span className="text-[13px] font-bold text-gray-800">
-                      675 contributions in the last year
+                      712 contributions in the last year
                     </span>
                   </div>
                   <span className="text-[11px] font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100">

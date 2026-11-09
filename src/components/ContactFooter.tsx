@@ -119,7 +119,7 @@ export const ContactFooter: React.FC = () => {
                         rel="noopener noreferrer"
                         className="text-[14px] font-medium text-gray-900 hover:text-blue-600 transition-colors"
                       >
-                        github.com/{PERSONAL_INFO.githubUsername} (675 contributions · 36 repos)
+                        github.com/{PERSONAL_INFO.githubUsername} (712 contributions · 36 repos)
                       </a>
                     </div>
                   </div>
