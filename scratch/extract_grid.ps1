@@ -8,3 +8,4 @@ Write-Output "Size: $($bmp.Width) x $($bmp.Height)"
 # Square default empty is #161b22. Green squares have R < G and G > 40.
 # Let's inspect some sample pixels across the image.
 $bmp.Dispose()
+

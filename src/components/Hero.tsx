@@ -151,15 +151,31 @@ const CONTRIBUTION_WEEKS: number[][] = [
   [0, 0, 0, 0, 1, 0, 2],
   [1, 0, 1, 1, 1, 1, 1],
   [0, 1, 0, 1, 1, 1, 1],
-  [4, 0, 0, 0, 0, 0, 0],
+  [4, 0, -1, -1, -1, -1, -1],
+];
+
+const MONTH_POSITIONS = [
+  { name: 'Nov', col: 0 },
+  { name: 'Dec', col: 4 },
+  { name: 'Jan', col: 8 },
+  { name: 'Feb', col: 12 },
+  { name: 'Mar', col: 17 },
+  { name: 'Apr', col: 21 },
+  { name: 'May', col: 26 },
+  { name: 'Jun', col: 30 },
+  { name: 'Jul', col: 34 },
+  { name: 'Aug', col: 39 },
+  { name: 'Sep', col: 43 },
+  { name: 'Oct', col: 47 },
+  { name: 'Nov', col: 51 },
 ];
 
 const LEVEL_COLORS = [
-  '#ebedf0', // level 0
+  '#ebedf0', // level 0 (empty)
   '#9be9a8', // level 1
   '#40c463', // level 2
   '#30a14e', // level 3
-  '#216e39', // level 4
+  '#1f883d', // level 4 (GitHub vibrant green)
 ];
 
 export const Hero: React.FC = () => {
@@ -694,22 +710,18 @@ export const Hero: React.FC = () => {
                 </div>
 
                 <div className="w-full overflow-x-auto pb-2">
-                  <div className="min-w-[800px] flex flex-col">
-                    {/* Month Labels */}
-                    <div className="flex text-[10px] font-semibold text-gray-400 mb-1 pl-7 justify-between pr-2">
-                      <span>Nov</span>
-                      <span>Dec</span>
-                      <span>Jan</span>
-                      <span>Feb</span>
-                      <span>Mar</span>
-                      <span>Apr</span>
-                      <span>May</span>
-                      <span>Jun</span>
-                      <span>Jul</span>
-                      <span>Aug</span>
-                      <span>Sep</span>
-                      <span>Oct</span>
-                      <span>Nov</span>
+                  <div className="w-fit flex flex-col">
+                    {/* Month Labels aligned to their real week columns */}
+                    <div className="relative h-4 text-[10px] font-semibold text-gray-400 mb-1 ml-7 w-[844px]">
+                      {MONTH_POSITIONS.map((m) => (
+                        <span
+                          key={`${m.name}-${m.col}`}
+                          className="absolute top-0 select-none"
+                          style={{ left: `${m.col * 16}px` }}
+                        >
+                          {m.name}
+                        </span>
+                      ))}
                     </div>
 
                     <div className="flex gap-2">
@@ -721,20 +733,32 @@ export const Hero: React.FC = () => {
                       </div>
 
                       {/* Contribution Grid */}
-                      <div className="flex gap-[4px] flex-1">
+                      <div className="flex gap-[4px]">
                         {CONTRIBUTION_WEEKS.map((week, wIdx) => (
                           <div key={wIdx} className="flex flex-col gap-[4px]">
-                            {week.map((level, dIdx) => (
-                              <div
-                                key={dIdx}
-                                title={`Week ${wIdx + 1}, Day ${dIdx + 1}: ${level * 3} contributions`}
-                                className="w-[12px] h-[12px] rounded-[2.5px] transition-transform hover:scale-125 cursor-pointer"
-                                style={{
-                                  backgroundColor: LEVEL_COLORS[level],
-                                  border: '1px solid rgba(0,0,0,0.05)',
-                                }}
-                              />
-                            ))}
+                            {week.map((level, dIdx) => {
+                              if (level === -1) {
+                                return (
+                                  <div
+                                    key={dIdx}
+                                    className="w-[12px] h-[12px] pointer-events-none"
+                                  />
+                                );
+                              }
+                              return (
+                                <div
+                                  key={dIdx}
+                                  title={`Week ${wIdx + 1}, Day ${dIdx + 1}: ${
+                                    level === 0 ? 'No' : level * 4
+                                  } contributions`}
+                                  className="w-[12px] h-[12px] rounded-[2.5px] transition-transform hover:scale-125 cursor-pointer"
+                                  style={{
+                                    backgroundColor: LEVEL_COLORS[level],
+                                    border: '1px solid rgba(0,0,0,0.06)',
+                                  }}
+                                />
+                              );
+                            })}
                           </div>
                         ))}
                       </div>

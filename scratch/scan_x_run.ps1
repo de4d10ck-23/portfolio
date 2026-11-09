@@ -11,3 +11,4 @@ for ($x = 480; $x -le 560; $x++) {
     }
 }
 $bmp.Dispose()
+

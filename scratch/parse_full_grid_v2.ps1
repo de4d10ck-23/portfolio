@@ -54,3 +54,4 @@ $jsContent = "export const GITHUB_EXACT_WEEKS: number[][] = [`n" + ($jsRows -joi
 Set-Content -Path "scratch\github_exact_grid.ts" -Value $jsContent
 
 $bmp.Dispose()
+

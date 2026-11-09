@@ -10,3 +10,4 @@ for ($n = 30; $n -le 35; $n++) {
     Write-Output "N=$n -> X=$xInt : R=$($c.R), G=$($c.G), B=$($c.B)"
 }
 $bmp.Dispose()
+

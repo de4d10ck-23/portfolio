@@ -53,3 +53,4 @@ $tsCode = "export const GITHUB_EXACT_WEEKS: number[][] = [`n" + ($tsLines -join 
 Set-Content -Path "scratch\exact_weeks.ts" -Value $tsCode
 
 $bmp.Dispose()
+

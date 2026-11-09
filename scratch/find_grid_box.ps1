@@ -30,3 +30,4 @@ Write-Output "Green pixels found: $($greenPixels.Count)"
 Write-Output "Bounding box of green pixels: X: $minX .. $maxX, Y: $minY .. $maxY"
 
 $bmp.Dispose()
+

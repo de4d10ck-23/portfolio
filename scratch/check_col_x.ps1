@@ -7,3 +7,4 @@ for ($c = 30; $c -le 45; $c++) {
     $x = [Math]::Round($xStart + ($c * $colPitch))
     Write-Output "c=$c -> X=$x"
 }
+

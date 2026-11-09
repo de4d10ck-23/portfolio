@@ -11,3 +11,4 @@ for ($c = 0; $c -le 54; $c++) {
     Write-Output "Col $c at X=$x -> R=$($cCol.R), G=$($cCol.G), B=$($cCol.B)"
 }
 $bmp.Dispose()
+

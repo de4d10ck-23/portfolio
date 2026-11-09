@@ -55,3 +55,4 @@ Set-Content -Path "scratch\exact_grid.json" -Value $json
 
 $bmp.Dispose()
 Write-Output "Done! Total weeks: $($grid.Count)"
+

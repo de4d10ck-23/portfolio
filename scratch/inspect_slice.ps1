@@ -10,3 +10,4 @@ for ($y = 60; $y -le 185; $y += 2) {
     Write-Output "Y=$y : R=$($c.R), G=$($c.G), B=$($c.B)"
 }
 $bmp.Dispose()
+
