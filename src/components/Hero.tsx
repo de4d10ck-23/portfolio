@@ -697,7 +697,7 @@ export const Hero: React.FC = () => {
 
               {/* GitHub Contribution Calendar */}
               <div className="p-6 bg-gray-50/60 border-b border-gray-100">
-                <div className="flex items-center justify-between mb-3">
+                <div className="max-w-[872px] mx-auto flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
                     <Code className="w-4 h-4 text-blue-600" />
                     <span className="text-[13px] font-bold text-gray-800">
@@ -709,8 +709,8 @@ export const Hero: React.FC = () => {
                   </span>
                 </div>
 
-                <div className="w-full overflow-x-auto pb-2">
-                  <div className="w-fit flex flex-col">
+                <div className="w-full overflow-x-auto pb-2 flex justify-start lg:justify-center">
+                  <div className="w-[872px] min-w-[872px] mx-auto flex flex-col">
                     {/* Month Labels aligned to their real week columns */}
                     <div className="relative h-4 text-[10px] font-semibold text-gray-400 mb-1 ml-7 w-[844px]">
                       {MONTH_POSITIONS.map((m) => (

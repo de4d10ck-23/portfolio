@@ -32,3 +32,4 @@ for ($x = ($maxX - 20); $x -le ($maxX + 30); $x += 2) {
 }
 
 $bmp.Dispose()
+

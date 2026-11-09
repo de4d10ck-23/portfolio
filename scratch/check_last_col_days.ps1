@@ -18,3 +18,4 @@ for ($r = 0; $r -lt 7; $r++) {
 }
 
 $bmp.Dispose()
+

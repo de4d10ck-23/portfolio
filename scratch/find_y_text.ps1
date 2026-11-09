@@ -9,3 +9,4 @@ for ($y = 35; $y -le 65; $y += 3) {
     }
 }
 $bmp.Dispose()
+

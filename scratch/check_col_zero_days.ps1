@@ -9,3 +9,4 @@ for ($r = 0; $r -lt 7; $r++) {
     Write-Output "Row $r (Y=$y): R=$($c.R), G=$($c.G), B=$($c.B)"
 }
 $bmp.Dispose()
+
